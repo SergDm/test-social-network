@@ -7,7 +7,7 @@ import classes from './Users.module.css';
 import Paginator from '../commonn/Paginator/Paginator';
 import { NavLink } from 'react-router-dom';
 
-class UsersTable extends Component {
+class UsersSearch extends Component {
 
   state = {
     search: "",
@@ -31,19 +31,26 @@ class UsersTable extends Component {
 
   render() {
 
-    const searchUser = this.props.users.filter(sUser => sUser.name.toLowerCase() === this.state.search.toLowerCase())
+    const dataUsers = this.props.users
 
-    const userElement = (user, cl) => {
-      return user.map(user =>
+    const searchUserName = dataUsers.filter(sUser => sUser.name.toLowerCase() === this.state.search.toLowerCase())
+
+    const searchUserId = dataUsers.filter(sUser => sUser.id === parseInt(this.state.search))
+
+    const userElement = (data, cl) => {
+      return data.map(user =>
         <NavLink className={cl} to={'/profile/' + user.id} key={user.id}><div >
           <div>Name: {user.name}</div>
           <div>Id: {user.id}</div>
           <div>Subscription: {user.followed ? 'yes' : 'no'}</div>
-        </div></NavLink>)}
+        </div></NavLink>)
+    }
 
-    const userBlock = userElement(this.props.users, classes.userBlock)
+    const userBlock = userElement(dataUsers, classes.userBlock)
 
-    const foundUser = userElement(searchUser, classes.usersFound)
+    const foundUserName = userElement(searchUserName, classes.usersFound)
+
+    const foundUserId = userElement(searchUserId, classes.usersFound)
 
     return (
       <div>
@@ -54,9 +61,13 @@ class UsersTable extends Component {
             pageSize={100}
             totalItemsCount={this.props.totalUsersCount} />
         </div>
-        <div>ПОИСК: <input type="text" onChange={this.hadlerInput} placeholder={'Enter name'}
-></input></div>
-        <div>{foundUser}</div>
+        <div align='center'>
+          <div className={classes.button}><b>Search by name: </b><input type="text" onChange={this.hadlerInput} placeholder={'Enter name'}
+          ></input></div>
+          <div className={classes.button}><b>Search by ID: </b><input type="text" onChange={this.hadlerInput} placeholder={'Enter Id'}></input></div>
+        </div>
+        <div>{foundUserId}</div>
+        <div>{foundUserName}</div>
         <div className={classes.usersTable}>
           {userBlock}
         </div>
@@ -73,4 +84,4 @@ const mapStateToProps = (state) => {
   }
 }
 
-export default compose(connect(mapStateToProps, { getUsers }))(UsersTable);
+export default compose(connect(mapStateToProps, { getUsers }))(UsersSearch);

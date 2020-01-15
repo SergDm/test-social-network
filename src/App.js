@@ -12,7 +12,7 @@ import Preloader from './components/commonn/loader/Preloader';
 import Login from './components/Login/Login';
 import store from './data/reduxStore';
 import { withSuspense } from './hoc/withSuspense';
-import UsersTable from './components/Users/UsersTable';
+import UsersSearch from './components/Users/UsersSearch';
 
 const DialogsContainer = React.lazy(() => import('./components/Dialogs/DialogsContainer'))
 const ProfileContainer = React.lazy(() => import('./components/Profile/ProfileContainer'))
@@ -31,11 +31,11 @@ class App extends Component {
         <HeaderContainer />
         <Navbar />
         <Switch>
-        <Route exact path='/' render={() => <div><h1>Социальная сеть SH</h1></div> } />
+        <Route exact path='/' render={() => <div><h1>Social network SH</h1></div> } />
         <Route path='/profile/:userId?' render={ withSuspense(ProfileContainer) } />
         <Route path='/dialogs' render={ withSuspense(DialogsContainer) } />
         <Route path='/users' render={() => <UsersContainer />} />
-        <Route path='/userstable' render={() => <UsersTable />} />
+        <Route path='/userssearch' render={() => <UsersSearch />} />
         <Route path='/login' render={() => <Login />} />
         </Switch>
         <Footer />

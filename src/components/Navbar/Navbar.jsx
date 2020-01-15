@@ -10,11 +10,11 @@ import { compose } from 'redux';
 const Navbar = (props) => {
 
   const state = [
-    { link: '/profile', name: 'Профиль' },
-    { link: '/dialogs', name: 'Сообщения' },
-    { link: '/news', name: 'Новости' },
-    { link: '/users', name: 'Друзья' },
-    { link: '/music', name: 'Музыка' }
+    { link: '/profile', name: 'Profile' },
+    { link: '/dialogs', name: 'Messages' },
+    { link: '/news', name: 'News' },
+    { link: '/users', name: 'Friends' },
+    { link: '/music', name: 'Music' }
   ]
 
   const menuTop = state.map((item, i) => <li key={i}>
@@ -42,11 +42,11 @@ const Navbar = (props) => {
               {menuTop}
               <nav id={classes.menuVertical}>
                 <ul>
-                  <li><NavLink to='/setting' activeClassName={classes.activ}>Настройки</NavLink>
+                  <li><NavLink to='/settings' activeClassName={classes.activ}>Settings</NavLink>
                     <ul>
-                      <li><a href="#m3_1">Общие</a></li>
-                      <li><a href="#m3_2">Разное</a></li>
-                      <li><a href="#m3_3">Безопасность</a></li>
+                      <li><a href="#m3_1">Global</a></li>
+                      <li><a href="#m3_2">Different </a></li>
+                      <li><a href="#m3_3">Security</a></li>
                     </ul>
                   </li>
                 </ul>

@@ -10,7 +10,7 @@ const Users = (props) => {
   return (
     <div>
       <div>
-      <NavLink to={'/userstable'}><button className={classes.button}>Table</button></NavLink>
+      <NavLink to={'/userssearch'}><button className={classes.button}>Search</button></NavLink>
         <Paginator currentPage={props.currentPage}
           onPageChanged={props.onPageChanged}
           pageSize={props.pageSize}
