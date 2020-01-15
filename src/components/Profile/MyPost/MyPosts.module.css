@@ -1,0 +1,16 @@
+.post {
+  font-size: 20px;
+  color: rgb(49, 27, 131);
+}
+
+.myPost {
+  margin-left: 30%;
+  font-size: 30px;
+  color: rgb(49, 27, 131);
+}
+
+fieldset { 
+  text-align: center;
+  height: 250px;
+  width: 50%;
+}

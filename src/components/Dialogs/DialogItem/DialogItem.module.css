@@ -1,0 +1,14 @@
+
+.dialog {
+  color: black;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.dialog img {
+  height: 30px;
+  border-radius: 20px;
+}

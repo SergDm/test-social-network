@@ -1,0 +1,9 @@
+.login {
+  font-size: 14px;
+  text-align: center;
+}
+
+.formSummaryError {
+  border-bottom: red 1px solid;
+  color: red;
+}

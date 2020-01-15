@@ -1,0 +1,11 @@
+.app-wrapper {
+  display: grid;
+  grid-template-areas:
+    "header header"
+    "navbar content"
+    "footer footer";
+  grid-template-rows: 70px 1fr 70px;
+  grid-template-columns: 1fr 5fr;
+  /* grid-gap: 10px; */
+  background-image: url("./components/Image/ep_naturalwhite.png");
+}

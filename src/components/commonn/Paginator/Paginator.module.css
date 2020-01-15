@@ -1,0 +1,38 @@
+.paginator {
+  font-size: 20px;
+  margin: 10px;
+  text-align: center;
+}
+
+.pageNumber {
+  background-color: #4B0082;
+  color: white;
+  padding: 3px;
+  border: none;
+  border-radius: 3px;
+  margin: 2px;
+  cursor: pointer;
+}
+
+.selectedPage {
+  background-color: #4B0082;
+  color: white;
+  font-size: 30px;
+  border: none;
+  padding: 3px;
+  border-radius: 3px;
+  margin: 1px;
+}
+
+.button {
+  background-color: #4B0082;
+  border: none;
+  color: white;
+  padding: 8px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 4px;
+  cursor: pointer;
+}
