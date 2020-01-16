@@ -8,13 +8,13 @@ import { getUsers } from '../../data/usersReducer';
 
 class ProfileContainer extends React.Component {
 
-state= {
-  flagBaner: true
-}
+  state = {
+    flagBaner: true
+  }
 
-deleteBaner = () => {
-  this.setState({flagBaner: !this.state.flagBaner})
-}
+  deleteBaner = () => {
+    this.setState({ flagBaner: !this.state.flagBaner })
+  }
   refreshProfile() {
     let userId = this.props.match.params.userId;
     if (!userId) {
@@ -26,15 +26,26 @@ deleteBaner = () => {
     this.props.getStatus(userId);
   }
 
+  // confirmLeave(e) {
+  //   let confirmationMessage = 'Уже уходите?'
+  //   e.returnValue = confirmationMessage
+  //   return confirmationMessage 
+  //   }
+
   componentDidMount() {
     this.refreshProfile()
     this.props.getUsers(1, 100);
+    //window.addEventListener('beforeunload', this.confirmLeave)
   }
 
   componentDidUpdate(prevProps, prevState, snapshot) {
     if (this.props.match.params.userId !== prevProps.match.params.userId) {
       this.refreshProfile()
     }
+  }
+
+  componentWillUnmount() {
+    //window.removeEventListener('beforeunload', this.confirmLeave)
   }
 
   render() {
@@ -46,7 +57,7 @@ deleteBaner = () => {
         updateStatus={this.props.updateStatus}
         savePhoto={this.props.savePhoto}
         flagBaner={this.state.flagBaner}
-        deleteBaner={this.deleteBaner}/>
+        deleteBaner={this.deleteBaner} />
     )
   }
 }
