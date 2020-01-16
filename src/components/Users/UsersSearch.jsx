@@ -6,6 +6,7 @@ import { getUsers } from '../../data/usersReducer';
 import classes from './Users.module.css';
 import Paginator from '../commonn/Paginator/Paginator';
 import { NavLink } from 'react-router-dom';
+import ava from '../Image/ava2.png';
 
 class UsersSearch extends Component {
 
@@ -40,6 +41,7 @@ class UsersSearch extends Component {
     const userElement = (data, cl) => {
       return data.map(user =>
         <NavLink className={cl} to={'/profile/' + user.id} key={user.id}><div >
+          <div><img src={user.photos.small !== null ? user.photos.small : ava} alt='ava' /></div>
           <div>Name: {user.name}</div>
           <div>Id: {user.id}</div>
           <div>Subscription: {user.followed ? 'yes' : 'no'}</div>
@@ -62,9 +64,8 @@ class UsersSearch extends Component {
             totalItemsCount={this.props.totalUsersCount} />
         </div>
         <div align='center'>
-          <div className={classes.button}><b>Search by name: </b><input type="text" onChange={this.hadlerInput} placeholder={'Enter name'}
+          <div className={classes.button}><b>Search by name or ID: </b><input type="text" onChange={this.hadlerInput} placeholder={'Enter name or ID'}
           ></input></div>
-          <div className={classes.button}><b>Search by ID: </b><input type="text" onChange={this.hadlerInput} placeholder={'Enter Id'}></input></div>
         </div>
         <div>{foundUserId}</div>
         <div>{foundUserName}</div>

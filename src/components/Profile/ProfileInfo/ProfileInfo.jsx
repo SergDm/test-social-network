@@ -4,7 +4,7 @@ import Preloader from '../../commonn/loader/Preloader';
 import ava from '../../Image/ava2.png';
 import ProfileDataForm from './ProfileDataForm';
 import { ProfileData } from './ProfileData';
-import baner from '../../Image/baner_1.png'
+import baner from '../../Image/baner.png'
 
 const ProfileInfo = (props) => {
 
@@ -27,13 +27,13 @@ const ProfileInfo = (props) => {
   }
 
   return (
-    <div className={classes.content  && classes.post}>
+    <div className={classes.post}>
       {props.flagBaner && <div>< img className={classes.baner} src={baner} alt='baner' /></div> }
       <button className={classes.btnBaner} onClick={props.deleteBaner}>{props.flagBaner ? "delete baner" : 'show baner'}</button>
       <div className={classes.dataFile}>
         <div className={classes.left}>
             <div>
-              < img className={classes.profileFoto} src={props.profile.photos.small ? props.profile.photos.small : ava}
+              < img className={classes.profileFoto} src={props.profile.photos.large ? props.profile.photos.large : ava}
                 alt='photos' />
             </div>
             <div>

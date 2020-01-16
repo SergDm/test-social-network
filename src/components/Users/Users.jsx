@@ -6,11 +6,11 @@ import { NavLink } from 'react-router-dom';
 
 
 const Users = (props) => {
-
+  const classesSum = classes.button + ' ' + classes.buttonSearch;
   return (
     <div>
       <div>
-      <NavLink to={'/userssearch'}><button className={classes.button}>Search</button></NavLink>
+      <NavLink to={'/userssearch'}><button className={classesSum} >Search</button></NavLink>
         <Paginator currentPage={props.currentPage}
           onPageChanged={props.onPageChanged}
           pageSize={props.pageSize}
