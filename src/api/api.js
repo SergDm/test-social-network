@@ -1,10 +1,13 @@
 import *as axios from 'axios';
 
+//'45bee115-3d4f-4239-93fc-d0d902e37977'
+//'f39f2c19-8228-4248-b97e-52ddf08aa596'
+
 const instans = axios.create({
   withCredentials: true,
   baseURL: 'https://social-network.samuraijs.com/api/1.0/',
   headers: {
-    'API-KEY': 'f39f2c19-8228-4248-b97e-52ddf08aa596'
+    'API-KEY': '45bee115-3d4f-4239-93fc-d0d902e37977'
   }
 })
 
