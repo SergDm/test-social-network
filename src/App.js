@@ -13,6 +13,7 @@ import Login from './components/Login/Login';
 import store from './data/reduxStore';
 import { withSuspense } from './hoc/withSuspense';
 import UsersSearch from './components/Users/UsersSearch';
+import News from './components/News/News';
 
 const DialogsContainer = React.lazy(() => import('./components/Dialogs/DialogsContainer'))
 const ProfileContainer = React.lazy(() => import('./components/Profile/ProfileContainer'))
@@ -35,6 +36,7 @@ class App extends Component {
         <Route path='/profile/:userId?' render={ withSuspense(ProfileContainer) } />
         <Route path='/dialogs' render={ withSuspense(DialogsContainer) } />
         <Route path='/users' render={() => <UsersContainer />} />
+        <Route path='/news' render={() => <News />} />
         <Route path='/userssearch' render={() => <UsersSearch />} />
         <Route path='/login' render={() => <Login />} />
         </Switch>

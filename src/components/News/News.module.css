@@ -1,7 +1,9 @@
 .content {
   grid-area: content;
-  height: 500px;
-  text-align: center;
+  font-size: 25px;
+  border-radius: 5px;
+  margin: 20px;
+  color: black;
 }
 
 .content img {
