@@ -4,9 +4,9 @@ import Post from './Post/Post';
 import { AddNewPostFormRedux } from './MyPostForm';
 
 
-const MyPosts = React.memo((props) => {
+const MyPosts = (props) => {
 
-    const postElement = props.postData.map(post => <Post key={post.id} message={post.message} likeCount={post.likeCount} />)
+    const postElement = props.postData.map(post => <Post key={post.id} name={post.name} message={post.message} likeCount={post.likeCount} />)
 
     let onAddPost = (values) => {
       props.addPost(values.newPostText)
@@ -20,6 +20,6 @@ const MyPosts = React.memo((props) => {
         </div>
       </div>
     )
-  })
+  }
 
-export default MyPosts;
+export default React.memo(MyPosts);

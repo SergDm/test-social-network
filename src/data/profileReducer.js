@@ -10,9 +10,9 @@ const SAVE_PHOTO_SUCCESS = 'SAVE_PHOTO_SUCCESS';
 
 let initialState = {
   postData: [
-    { id: 1, message: 'Hi, how are you?', likeCount: 15 },
-    { id: 2, message: "It's my first post", likeCount: 10 },
-    { id: 3, message: "It's my", likeCount: 1 }
+    { id: 1, name: 'Bill', message: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi officia, doloribus, fugit consequatur laudantium veritatis, facilis minima nihil nostrum natus a?', likeCount: 15 },
+    { id: 2, name: 'Joe', message: "It's my first post", likeCount: 10 },
+    { id: 3, name: 'Sam', message: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi officia, doloribus, fugit consequatur laudantium veritatis, facilis minima nihil nostrum natus a? Adipisci consequatur maiores magnam velit, doloribus illum officia eligendi.", likeCount: 1 }
   ],
 
   profile: null,
@@ -27,6 +27,7 @@ export const profileReducer = (state = initialState, action) => {
     case ADD_POST:
       let newPost = {
         id: Math.floor(Math.random() * 10),
+        name: 'you',
         message: action.newPostText,
         likeCount: 0
       };

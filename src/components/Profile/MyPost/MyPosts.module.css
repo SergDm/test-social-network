@@ -4,13 +4,36 @@
 }
 
 .myPost {
-  margin-left: 30%;
   font-size: 30px;
   color: rgb(49, 27, 131);
 }
 
 fieldset { 
+  margin: 0 auto;
+  border-radius: 5px;
+  border: none;
+  background-color: rgb(224, 203, 203);
+  display: block;
   text-align: center;
   height: 250px;
-  width: 50%;
+  width: 30%;
+}
+
+fieldset:hover {
+  border: 1px solid rgb(190, 171, 171);
+  box-shadow: 0px 5px 15px 0 rgba(0, 0, 0, .25);
+}
+
+button {
+  padding: 6px 6px;
+  color: white;
+  background: #4B0082;
+  border-radius: 5px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+button:hover {   
+color: black;
+background: white;
 }

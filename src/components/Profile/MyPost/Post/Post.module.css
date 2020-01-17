@@ -1,14 +1,18 @@
 .item {
+  display: block;
   font-size: 20px;
   color: rgb(49, 27, 131);
-  margin: 30px;
+  margin: 5px auto;
+  padding: 10px;
+  width: 550px;
+  border: 1px inset #4B0082;
+  border-radius: 3px;
 }
 .item img {
   width: 50px;
   border-radius: 30px;
 }
 
-.like {
-  color: black;
-  font-size: 14px;
+input[type="image"]:hover {
+  transform: scale(1.2);
 }
