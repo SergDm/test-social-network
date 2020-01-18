@@ -19,7 +19,7 @@
   text-align: center;
   text-decoration: none;
   margin: 5px;
-  border: #4B0082 solid 2px;
+  border: #8DBFE4 solid 2px;
   border-radius: 3px;
   padding: 15px;
 }
@@ -29,12 +29,12 @@
   margin: 0px 20px 50px 20px;
   text-align: center;
   padding: 30px 70px;
-  border: #4B0082 solid 2px;
+  border: #8DBFE4 solid 2px;
   border-radius: 5px;
  }
 
 .button {
-  background-color: #4B0082;
+  background-color: #8DBFE4;
   border: none;
   color: white;
   padding: 10px 32px;

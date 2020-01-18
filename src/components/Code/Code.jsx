@@ -6,16 +6,21 @@ import baseCode from './BaseCode'
 const CodeJs = () => {
 
   const baseCodeMain = baseCode.sort((a, b) => a.id - b.id).map(data =>
-    <div>
+    <div id={data.id}>
       <h2>{data.title}</h2>
       {data.code}
       <a href={data.href}>
         <b>{data.href}</b></a>
     </div>)
+  
+  const menuCode = baseCode.map(item => 
+  <div className={classes.menuCode}><a href={`#` + item.id}>{item.title}</a></div>
+    )
 
   return (
     <div className={classes.code} >
-      <h1><u>Native JavaScript</u></h1>
+      <h1 align='center'><u>Native JavaScript</u></h1>
+      <div className={classes.menuCodeMain}>{menuCode}</div>
       {baseCodeMain}
     </div>
   )

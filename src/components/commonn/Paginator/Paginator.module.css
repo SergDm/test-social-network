@@ -5,7 +5,7 @@
 }
 
 .pageNumber {
-  background-color: #4B0082;
+  background-color: #8DBFE4;
   color: white;
   padding: 3px;
   border: none;
@@ -15,7 +15,7 @@
 }
 
 .selectedPage {
-  background-color: #4B0082;
+  background-color: #8DBFE4;
   color: white;
   font-size: 30px;
   border: none;
@@ -25,7 +25,7 @@
 }
 
 .button {
-  background-color: #4B0082;
+  background-color: #8DBFE4;
   border: none;
   color: white;
   padding: 8px 20px;
