@@ -9,3 +9,8 @@
 .content img {
   width: 50px;
 }
+
+.code {
+  width: 800px;
+  margin: 30px 0px 30px 100px;
+}

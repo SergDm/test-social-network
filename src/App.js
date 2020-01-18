@@ -32,7 +32,7 @@ class App extends Component {
         <HeaderContainer />
         <Navbar />
         <Switch>
-        <Route exact path='/' render={() => <div><h1>Social network SH</h1></div> } />
+        <Route exact path='/' render={() => <div><h1>Social network SK</h1></div> } />
         <Route path='/profile/:userId?' render={ withSuspense(ProfileContainer) } />
         <Route path='/dialogs' render={ withSuspense(DialogsContainer) } />
         <Route path='/users' render={() => <UsersContainer />} />

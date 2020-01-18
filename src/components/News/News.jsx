@@ -3,17 +3,22 @@ import classes from './News.module.css'
 
 class News extends Component {
 
-  state = {
-    code: [1,2,3]
-  }
-
   render() {
-    const outputCode =
-      this.state.code.map((str, i) => <div key={i}>{str}</div>)
-
     return (
-      <div className={classes.content}>
-        {outputCode}
+      <div className={classes.code} >
+        <h1><u>Native JavaScript</u></h1>
+        <div>
+          <h2>Сортировка вставками:</h2>
+          <details>
+            <iframe height="600px" width="100%" src="https://repl.it/@SergDm/Insertion-Sort-JS?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals" title='Insertion-Sort'></iframe>
+          </details>
+        </div>
+        <div>
+          <h2>Сортировка пузырьком:</h2>
+          <details>
+            <iframe height="600px" width="100%" src="https://repl.it/@SergDm/Bubble-sort?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals" title='Bubble-Sort'></iframe>
+          </details>
+        </div>
       </div>
     )
   }
