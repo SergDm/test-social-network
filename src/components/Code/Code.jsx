@@ -19,9 +19,11 @@ const CodeJs = () => {
 
   return (
     <div className={classes.code} >
+      <p id='top'></p>
       <h1 align='center'><u>Native JavaScript</u></h1>
       <div className={classes.menuCodeMain}>{menuCode}</div>
       {baseCodeMain}
+      <a className={classes.buttonTop} href="#top">Up</a>
     </div>
   )
 }
