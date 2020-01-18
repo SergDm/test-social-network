@@ -12,7 +12,7 @@ const Navbar = (props) => {
   const state = [
     { link: '/profile', name: 'Profile' },
     { link: '/dialogs', name: 'Messages' },
-    { link: '/news', name: 'News' },
+    { link: '/code', name: 'CodeJS' },
     { link: '/users', name: 'Friends' },
     { link: '/music', name: 'Music' }
   ]
