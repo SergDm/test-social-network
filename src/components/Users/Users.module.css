@@ -16,7 +16,6 @@
 .userBlock {
   color: black;
   font-size: 25px;
-  text-align: center;
   text-decoration: none;
   margin: 5px;
   border: #8DBFE4 solid 2px;
@@ -64,6 +63,7 @@
   display: block;
   float: left;
   margin: 6px;
+  padding: 6px;
 }
 
 .buttonSearch {

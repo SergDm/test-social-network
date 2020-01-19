@@ -7,7 +7,7 @@ const CodeJs = () => {
 
   const baseCodeMain = baseCode.sort((a, b) => a.id - b.id).map(data =>
     <div id={data.id} key={data.id}>
-      <h2>{data.title}</h2>
+      <h2><u>{data.title}</u></h2>
       {data.code}
       <a href={data.href}>
         <b>{data.href}</b></a>
