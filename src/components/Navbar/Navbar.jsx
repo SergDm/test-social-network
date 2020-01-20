@@ -14,12 +14,29 @@ const Navbar = (props) => {
     { link: '/dialogs', name: 'Messages' },
     { link: '/code', name: 'CodeJS' },
     { link: '/users', name: 'Friends' },
-    { link: '/music', name: 'Music' }
+    { link: '/music', name: 'Music' },
+    {
+      link: '/settings', name: 'Settings',
+      bottom:
+        [
+          { link: "#m3_1", name: 'Global' },
+          { link: "#m3_2", name: 'Different' },
+          { link: "#m3_3", name: 'Security' }
+        ]
+    }
   ]
 
-  const menuTop = state.map((item, i) => <li key={i}>
-    <NavLink to={item.link} activeClassName={classes.activ}>{item.name}</NavLink>
-  </li>)
+  const menuTop = state.map((item, i) => {
+    return (
+      <li key={i}>
+        <NavLink to={item.link} activeClassName={classes.activ}>{item.name}</NavLink>
+        {item.bottom
+          ? <ul key={i}>{item.bottom.map((item, i) => <li key={i}><a href={item.link}>{item.name}</a></li>)}</ul>
+          : null}
+      </li>
+    )
+  }
+  )
 
   let friendsState = props.users.filter(user => user.followed)
 
@@ -40,17 +57,6 @@ const Navbar = (props) => {
           <nav id={classes.menuVertical}>
             <ul>
               {menuTop}
-              <nav id={classes.menuVertical}>
-                <ul>
-                  <li><NavLink to='/settings' activeClassName={classes.activ}>Settings</NavLink>
-                    <ul>
-                      <li><a href="#m3_1">Global</a></li>
-                      <li><a href="#m3_2">Different </a></li>
-                      <li><a href="#m3_3">Security</a></li>
-                    </ul>
-                  </li>
-                </ul>
-              </nav>
             </ul>
           </nav>
         </nav>
@@ -58,7 +64,6 @@ const Navbar = (props) => {
       <div>
         <div className={classes.friends_title}><h2>Friends</h2></div>
         <div className={classes.friends}>{friends}</div>
-
       </div>
     </div>
   )

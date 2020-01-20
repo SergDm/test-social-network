@@ -42,6 +42,7 @@
   font-size: 16px;
   border-radius: 4px;
   cursor: pointer;
+  text-transform: uppercase;
 }
 
 .usersFound {
@@ -74,6 +75,8 @@
 .button:hover {
   color: black;
   background-color: white;
+  background-image: url("../Image/search.png");
+  background-repeat: no-repeat;
 }
 
 input[type=text] {
