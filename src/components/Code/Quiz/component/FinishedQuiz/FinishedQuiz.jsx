@@ -5,7 +5,7 @@ const FinishedQuiz = (props) => {
 
     const successCount = Object.keys(props.results).reduce((total, key) => {
         if (props.results[key] === 'success') {
-            total++
+            total += 1
         }
         return total
     }, 0)
@@ -14,16 +14,14 @@ const FinishedQuiz = (props) => {
         <div className={classes.finished}>
             <ul>
                 {props.quiz.map((quizItem, index) => {
-                    const cls = [
-                        'fa',
-                        props.results[quizItem.id] === 'error' ? 'fa-times' : 'fa-check',
-                        classes[props.results[quizItem.id]]
-                    ]
+                    
                     return (
                         <li key={index}>
                             <strong>{index + 1}</strong>.&nbsp;
-                            {quizItem.id}
-                            <i className={cls.join(' ')} />
+                            
+                            <i className={props.results[quizItem.id] === 'error' 
+                            ? 'fa fa-times' 
+                            : 'fa fa-check'} />
                         </li>
                     )
                 })}

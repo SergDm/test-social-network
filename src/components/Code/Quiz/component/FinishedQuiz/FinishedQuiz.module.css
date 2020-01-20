@@ -16,11 +16,3 @@
 .finished ul li i {
   margin: 10px;
 }
-
-.success {
-  color: rgba(161, 240, 69, 0.7);
-}
-
-.error {
-  color: rgba(240, 87, 108, 0.7);
-}

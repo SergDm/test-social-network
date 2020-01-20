@@ -167,13 +167,13 @@ class Questions extends Component {
         const results = this.state.results
 
         if (question.rightAnswerId === answerId) {
-            if (!results[answerId]) {
-                results[answerId] = 'success'
+            if (!results[question.id]) {
+                results[question.id] = 'success'
             }
 
             this.setState({
                 answerState: { [answerId]: 'success' },
-                results
+                results: results
             })
             const timeout = window.setTimeout(() => {
                 if (this.isQuizFinished()) {
@@ -189,11 +189,10 @@ class Questions extends Component {
                 window.clearTimeout(timeout)
             }, 1000)
         } else {
-            results[answerId] = 'error'
+            results[question.id] = 'error'
             this.setState({
-                answerState: {
-                    [answerId]: 'error'},
-                results
+                answerState: {[answerId]: 'error'},
+                results: results
             })
         }
     }
