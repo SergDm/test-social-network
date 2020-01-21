@@ -2,6 +2,7 @@ import React from 'react'
 import classes from './Code.module.css'
 import './BaseCode.css'
 import baseCode from './BaseCode'
+import { NavLink } from 'react-router-dom'
 
 const CodeJs = () => {
 
@@ -19,7 +20,8 @@ const CodeJs = () => {
 
   return (
     <div className={classes.code} >
-      <p id='top'></p>
+      <p id='top' style={{position: 'absolute'}}></p>
+      <NavLink to={'/quiz'}><button>quiz</button></NavLink>
       <h1><u>Native JavaScript</u></h1>
       <div className={classes.menuCodeMain}>{menuCode}</div>
       {baseCodeMain}

@@ -90,3 +90,16 @@
 h1, h2 {
   text-align: center;
 }
+
+.code button {
+  position: absolute;
+  background-color: #8DBFE4;
+  border: none;
+  color: white;
+  padding: 10px 32px;
+  text-decoration: none;
+  font-size: 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  text-transform: uppercase;
+}

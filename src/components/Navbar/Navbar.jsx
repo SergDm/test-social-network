@@ -12,18 +12,16 @@ const Navbar = (props) => {
   const state = [
     { link: '/profile', name: 'Profile' },
     { link: '/dialogs', name: 'Messages' },
-    { link: '/code', name: 'CodeJS' },
-    { link: '/users', name: 'Friends' },
+    {link: '/code', name: 'CodeJS', bottom:
+        [{ link: '/code', name: 'Native JavaScript' },
+        { link: '/quiz', name: 'Quiz' }]
+      },
+    {link: '/users', name: 'Friends', bottom:
+        [{ link: '/users', name: 'List' },
+        { link: '/userssearch', name: 'Search' }]
+      },
     { link: '/music', name: 'Music' },
-    {
-      link: '/settings', name: 'Settings',
-      bottom:
-        [
-          { link: "#m3_1", name: 'Global' },
-          { link: "#m3_2", name: 'Different' },
-          { link: "#m3_3", name: 'Security' }
-        ]
-    }
+    {link: '/settings', name: 'Settings' }
   ]
 
   const menuTop = state.map((item, i) => {
