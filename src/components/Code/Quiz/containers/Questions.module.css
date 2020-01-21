@@ -42,9 +42,7 @@
 
 .questions h1 {
     color: white;
-    margin-left: 10px;
+    text-decoration: underline;
+    margin-left: 10%;
 }
 
-.questionsWrapper {
-  
-}

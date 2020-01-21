@@ -7,12 +7,51 @@
   margin: 0 10px;
 }
 
-.finished ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
+.question {
+  display: inline-block;
+  width: 50%;
+  font-size: 10px;
+  margin: 2px;
 }
 
-.finished ul li i {
-  margin: 10px;
+.answer {
+  display: inline-block;
+  font-size: 50px;
 }
+
+.success {
+  color: green;
+}
+
+.error {
+  color: red;
+}
+
+.finished h2 {
+  position: absolute;
+  width: 40px;
+  background: black;
+  border-radius: 20px;
+  font-size: 25px;
+  color:white;
+  padding: 2px;
+  margin: 2px;
+}
+
+.finished b {
+  font-size: 20px;
+}
+
+.finished button {
+  margin-left: 40px;
+  background-color: #8DBFE4;
+  border: none;
+  color: white;
+  padding: 10px 32px;
+  text-decoration: none;
+  font-size: 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+

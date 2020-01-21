@@ -10,26 +10,31 @@ const FinishedQuiz = (props) => {
         return total
     }, 0)
 
+    const finishResult = props.quiz.map((quizItem, index) => {
+        const cls = [
+            'fa',
+            props.results[quizItem.id] === 'error' ? 'fa-times' : 'fa-check',
+            classes[props.results[quizItem.id]]
+        ]
+        return (
+            <div key={index}>
+                <div className={classes.question}>
+                    <h2>{index + 1}</h2>
+                    {quizItem.question}
+                </div>
+                <div className={classes.answer}>
+                    <i className={cls.join(' ')} />
+                </div>
+            </div>
+        )
+    })
+
     return (
         <div className={classes.finished}>
-            <ul>
-                {props.quiz.map((quizItem, index) => {
-                    
-                    return (
-                        <li key={index}>
-                            <strong>{index + 1}</strong>.&nbsp;
-                            
-                            <i className={props.results[quizItem.id] === 'error' 
-                            ? 'fa fa-times' 
-                            : 'fa fa-check'} />
-                        </li>
-                    )
-                })}
-            </ul>
-            <b>Правильно {successCount} из {props.quiz.length}</b>
-            <div>
-                <button>Повторить</button>
-            </div>
+            {finishResult}
+            <b>Correct answers {successCount} of {props.quiz.length}</b>
+            <button onClick={props.onRetry}>RETRY</button>
+
         </div>
     )
 }

@@ -12,11 +12,11 @@ const Navbar = (props) => {
   const state = [
     { link: '/profile', name: 'Profile' },
     { link: '/dialogs', name: 'Messages' },
-    {link: '/code', name: 'CodeJS', bottom:
+    {link: '#', name: 'CodeJS', bottom:
         [{ link: '/code', name: 'Native JavaScript' },
         { link: '/quiz', name: 'Quiz' }]
       },
-    {link: '/users', name: 'Friends', bottom:
+    {link: '#', name: 'Friends', bottom:
         [{ link: '/users', name: 'List' },
         { link: '/userssearch', name: 'Search' }]
       },

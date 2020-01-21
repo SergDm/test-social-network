@@ -3,7 +3,7 @@ import React from 'react'
 const baseCode = [
     {
         id: 1,
-        title: 'Сортировка вставками',
+        title: 'Insertion Sort',
         href: 'https://repl.it/@SergDm/Insertion-Sort-JS',
         code: <div className="javascript"><ol><li className="li1"><div className="de1"><span className="kw2">const</span> insert <span className="sy0">=</span> <span className="br0">&#40;</span>arr<span className="br0">&#41;</span> <span className="sy0">=&gt;</span> <span className="br0">&#123;</span></div></li>
             <li className="li1"><div className="de1">&nbsp; <span className="kw1">for</span> <span className="br0">&#40;</span>let top <span className="sy0">=</span> <span className="nu0">1</span><span className="sy0">;</span> top <span className="sy0">&lt;</span> arr.<span className="me1">length</span><span className="sy0">;</span> top <span className="sy0">+=</span> <span className="nu0">1</span><span className="br0">&#41;</span> <span className="br0">&#123;</span></div></li>
@@ -20,7 +20,7 @@ const baseCode = [
     },
     {
         id: 7,
-        title: 'Алгоритм Эвклида',
+        title: 'Euclidean Algorithm',
         href: 'https://repl.it/@SergDm/Euclidean-algorithm',
         code: <div className="javascript"><ol><li className="li1"><div className="de1"><span className="kw2">const</span> gcd <span className="sy0">=</span> <span className="br0">&#40;</span>a<span className="sy0">,</span> b<span className="br0">&#41;</span> <span className="sy0">=&gt;</span> <span className="br0">&#123;</span></div></li>
             <li className="li1"><div className="de1">&nbsp; <span className="kw1">if</span> <span className="br0">&#40;</span>a <span className="sy0">===</span> b<span className="br0">&#41;</span> <span className="br0">&#123;</span></div></li>
@@ -49,7 +49,7 @@ const baseCode = [
     },
     {
         id: 2,
-        title: 'Сортировка пузырьком',
+        title: 'Bubble sort',
         href: 'https://repl.it/@SergDm/Bubble-sort',
         code: <div className="javascript"><ol><li className="li1"><div className="de1"><span className="kw2">const</span> bubbleSort <span className="sy0">=</span> <span className="br0">&#40;</span>arr<span className="br0">&#41;</span> <span className="sy0">=&gt;</span> <span className="br0">&#123;</span></div></li>
             <li className="li1"><div className="de1">&nbsp; <span className="kw1">for</span> <span className="br0">&#40;</span>let bypass <span className="sy0">=</span> <span className="nu0">1</span><span className="sy0">;</span> bypass <span className="sy0">&lt;</span> arr.<span className="me1">length</span><span className="sy0">;</span> bypass <span className="sy0">+=</span> <span className="nu0">1</span><span className="br0">&#41;</span> <span className="br0">&#123;</span></div></li>
@@ -66,7 +66,7 @@ const baseCode = [
     },
     {
         id: 3,
-        title: 'Сортировка выбором',
+        title: 'Sort by selection',
         href: 'https://repl.it/@SergDm/Selection-sort',
         code: <div className="javascript"><ol><li className="li1"><div className="de1"><span className="kw2">const</span> choise <span className="sy0">=</span> <span className="br0">&#40;</span>arr<span className="br0">&#41;</span> <span className="sy0">=&gt;</span> <span className="br0">&#123;</span></div></li>
             <li className="li1"><div className="de1">&nbsp; <span className="kw1">for</span> <span className="br0">&#40;</span>let pos <span className="sy0">=</span> <span className="nu0">0</span><span className="sy0">;</span> pos <span className="sy0">&lt;</span> arr.<span className="me1">length</span> <span className="sy0">-</span> <span className="nu0">1</span><span className="sy0">;</span> pos <span className="sy0">+=</span> <span className="nu0">1</span><span className="br0">&#41;</span> <span className="br0">&#123;</span></div></li>
@@ -84,7 +84,7 @@ const baseCode = [
     },
     {
         id: 4,
-        title: 'Сортировка Хоара',
+        title: 'Hoar Sort',
         href: 'https://repl.it/@SergDm/Sort-Hoar',
         code: <div className="javascript"><ol><li className="li1"><div className="de1"><span className="kw2">const</span> hoar_sort <span className="sy0">=</span> <span className="br0">&#40;</span>a<span className="br0">&#41;</span> <span className="sy0">=&gt;</span> <span className="br0">&#123;</span></div></li>
             <li className="li1"><div className="de1">&nbsp; <span className="kw1">if</span> <span className="br0">&#40;</span>a.<span className="me1">length</span> <span className="sy0">&lt;=</span> <span className="nu0">1</span><span className="br0">&#41;</span> <span className="br0">&#123;</span></div></li>
@@ -118,7 +118,7 @@ const baseCode = [
     },
     {
         id: 5,
-        title: 'Сортировка двух массивов',
+        title: 'Sort two arrays',
         href: 'https://repl.it/@SergDm/Sort-2-array',
         code: <div className="javascript"><ol><li className="li1"><div className="de1"><span className="kw2">const</span> merge <span className="sy0">=</span> <span className="br0">&#40;</span>a<span className="sy0">,</span> b<span className="br0">&#41;</span> <span className="sy0">=&gt;</span> <span className="br0">&#123;</span></div></li>
             <li className="li1"><div className="de1">&nbsp; let c <span className="sy0">=</span> <span className="br0">&#91;</span><span className="br0">&#93;</span><span className="sy0">;</span></div></li>
@@ -151,7 +151,7 @@ const baseCode = [
     },
     {
         id: 6,
-        title: 'Проверка отсортированности массива',
+        title: 'Checking array sorting',
         href: 'https://repl.it/@SergDm/CheckSort',
         code: <div className="javascript"><ol><li className="li1"><div className="de1"><span className="kw2">const</span> check_sort <span className="sy0">=</span> <span className="br0">&#40;</span>a<span className="sy0">,</span> ascending<span className="br0">&#41;</span> <span className="sy0">=&gt;</span> <span className="br0">&#123;</span></div></li>
             <li className="li1"><div className="de1">let flag <span className="sy0">=</span> <span className="kw2">true</span></div></li>
@@ -170,7 +170,7 @@ const baseCode = [
     },
     {
         id: 8,
-        title: 'Бинарный поиск',
+        title: 'Binary search',
         href: 'https://repl.it/@SergDm/Binary-search',
         code: <div className="javascript"><ol><li className="li1"><div className="de1"><span className="kw2">const</span> left_bound <span className="sy0">=</span> <span className="br0">&#40;</span>arr<span className="sy0">,</span> key<span className="br0">&#41;</span> <span className="sy0">=&gt;</span> <span className="br0">&#123;</span></div></li>
             <li className="li1"><div className="de1">&nbsp; let left <span className="sy0">=</span> <span className="sy0">-</span><span className="nu0">1</span><span className="sy0">;</span></div></li>
@@ -203,7 +203,7 @@ const baseCode = [
     },
     {
         id: 9,
-        title: 'Ханойская башня',
+        title: 'Tower of hanoi',
         href: 'https://repl.it/@SergDm/Canaan-tower',
         code: <div className="javascript"><ol><li className="li1"><div className="de1"><span className="kw2">const</span> hanoi <span className="sy0">=</span> <span className="br0">&#40;</span>n<span className="sy0">,</span> i<span className="sy0">,</span> k<span className="br0">&#41;</span> <span className="sy0">=&gt;</span> <span className="br0">&#123;</span></div></li>
             <li className="li1"><div className="de1">&nbsp; <span className="kw1">if</span> <span className="br0">&#40;</span>n <span className="sy0">===</span> <span className="nu0">1</span><span className="br0">&#41;</span> <span className="br0">&#123;</span></div></li>
@@ -221,7 +221,7 @@ const baseCode = [
     },
     {
         id: 10,
-        title: 'Генератор чисел',
+        title: 'Number generator',
         href: 'https://repl.it/@SergDm/Number-generator',
         code: <div className="javascript"><ol><li className="li1"><div className="de1"><span className="kw2">const</span> generate_num <span className="sy0">=</span> <span className="br0">&#40;</span>n<span className="sy0">,</span> m<span className="sy0">,</span> prefix<span className="br0">&#41;</span> <span className="sy0">=&gt;</span><span className="br0">&#123;</span></div></li>
             <li className="li1"><div className="de1">&nbsp; &nbsp; <span className="kw1">if</span> <span className="br0">&#40;</span>m <span className="sy0">===</span> <span className="nu0">0</span><span className="br0">&#41;</span> <span className="br0">&#123;</span></div></li>
@@ -240,7 +240,7 @@ const baseCode = [
     },
     {
         id: 11,
-        title: 'Генератор перестановок',
+        title: 'Permutation generator',
         href: 'https://repl.it/@SergDm/Permutation-generator',
         code: <div className="javascript"><ol><li className="li1"><div className="de1"><span className="kw2">const</span> generate_permutations <span className="sy0">=</span> <span className="br0">&#40;</span>n<span className="sy0">,</span> m <span className="sy0">=</span> n<span className="sy0">,</span> prefix <span className="sy0">=</span> <span className="br0">&#91;</span><span className="br0">&#93;</span><span className="br0">&#41;</span> <span className="sy0">=&gt;</span> <span className="br0">&#123;</span></div></li>
             <li className="li1"><div className="de1">&nbsp; <span className="kw1">if</span> <span className="br0">&#40;</span>m <span className="sy0">===</span> <span className="nu0">0</span><span className="br0">&#41;</span> <span className="br0">&#123;</span></div></li>
@@ -269,7 +269,7 @@ const baseCode = [
     },
     {
         id: 12,
-        title: 'Поиск числа Фибоначи',
+        title: 'Fibonacci number search',
         href: 'https://repl.it/@SergDm/Fibonacci-number-search',
         code: <div className="javascript"><ol><li className="li1"><div className="de1"><span className="kw2">const</span> fib <span className="sy0">=</span> <span className="br0">&#40;</span>n<span className="br0">&#41;</span> <span className="sy0">=&gt;</span> <span className="br0">&#123;</span></div></li>
             <li className="li1"><div className="de1">&nbsp; let fib <span className="sy0">=</span> <span className="br0">&#91;</span><span className="nu0">0</span><span className="sy0">,</span><span className="nu0">1</span><span className="br0">&#93;</span></div></li>
@@ -283,7 +283,7 @@ const baseCode = [
     },
     {
         id: 13,
-        title: 'Быстрое возведение в степень',
+        title: 'Fast exponentiation',
         href: 'https://repl.it/@SergDm/Fast-exponentiation',
         code: <div className="javascript"><ol><li className="li1"><div className="de1"><span className="kw2">const</span> pow <span className="sy0">=</span> <span className="br0">&#40;</span>a<span className="sy0">,</span> n<span className="br0">&#41;</span> <span className="sy0">=&gt;</span> n <span className="sy0">===</span> <span className="nu0">0</span> <span className="sy0">?</span> <span className="nu0">1</span> <span className="sy0">:</span> pow<span className="br0">&#40;</span>a<span className="sy0">,</span> n <span className="sy0">-</span> <span className="nu0">1</span><span className="br0">&#41;</span> <span className="sy0">*</span> a</div></li>
             <li className="li1"><div className="de1">&nbsp;</div></li>
@@ -296,7 +296,7 @@ const baseCode = [
     },
     {
         id: 14,
-        title: 'Счетчик',
+        title: 'Counter',
         href: 'https://repl.it/@SergDm/Counter',
         code: <div className="javascript"><ol><li className="li1"><div className="de1"><span className="kw2">const</span> MyTimer <span className="sy0">=</span> <span className="kw2">function</span><span className="br0">&#40;</span>t<span className="sy0">,</span> s <span className="sy0">=</span> <span className="nu0">0</span><span className="br0">&#41;</span> <span className="br0">&#123;</span></div></li>
             <li className="li1"><div className="de1">&nbsp; <span className="kw1">this</span>.<span className="me1">time</span> <span className="sy0">=</span> t</div></li>

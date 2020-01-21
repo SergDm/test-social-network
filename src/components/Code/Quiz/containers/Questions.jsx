@@ -7,148 +7,162 @@ import FinishedQuiz from '../component/FinishedQuiz/FinishedQuiz'
 class Questions extends Component {
     state = {
         results: {},
-        isFinished: false,
+        isFinished: true,
         activQuest: 0,
         answerState: null,
         quiz: [
             {
-                rightAnswerId: 1,
+                question: baseCode[0].code,
+                rightAnswerId: 2,
                 id: 1,
                 answers: [
-                    { text: 'Сортировка вставками', id: 1 },
-                    { text: 'Алгоритм Эвклида', id: 2 },
-                    { text: 'Сортировка пузырьком', id: 3 },
-                    { text: 'Сортировка выбором', id: 4 },
+                    { text: baseCode[2].title, id: 1 },
+                    { text: baseCode[0].title, id: 2 },
+                    { text: baseCode[4].title, id: 3 },
+                    { text: baseCode[6].title, id: 4 },
                 ]
             },
             {
-                rightAnswerId: 1,
+                question: baseCode[1].code,
+                rightAnswerId: 3,
                 id: 2,
                 answers: [
-                    { text: 'Сортировка вставками', id: 1 },
-                    { text: 'Алгоритм Эвклида', id: 2 },
-                    { text: 'Сортировка пузырьком', id: 3 },
-                    { text: 'Сортировка выбором', id: 4 },
+                    { text: baseCode[11].title, id: 1 },
+                    { text: baseCode[13].title, id: 2 },
+                    { text: baseCode[1].title, id: 3 },
+                    { text: baseCode[2].title, id: 4 },
                 ]
             },
             {
+                question: baseCode[2].code,
                 rightAnswerId: 1,
                 id: 3,
                 answers: [
-                    { text: 'Сортировка вставками', id: 1 },
-                    { text: 'Алгоритм Эвклида', id: 2 },
-                    { text: 'Сортировка пузырьком', id: 3 },
-                    { text: 'Сортировка выбором', id: 4 },
+                    { text: baseCode[2].title, id: 1 },
+                    { text: baseCode[10].title, id: 2 },
+                    { text: baseCode[1].title, id: 3 },
+                    { text: baseCode[0].title, id: 4 },
                 ]
             },
             {
-                rightAnswerId: 1,
+                question: baseCode[3].code,
+                rightAnswerId: 4,
                 id: 4,
                 answers: [
-                    { text: 'Сортировка вставками', id: 1 },
-                    { text: 'Алгоритм Эвклида', id: 2 },
-                    { text: 'Сортировка пузырьком', id: 3 },
-                    { text: 'Сортировка выбором', id: 4 },
+                    { text: baseCode[10].title, id: 1 },
+                    { text: baseCode[11].title, id: 2 },
+                    { text: baseCode[12].title, id: 3 },
+                    { text: baseCode[3].title, id: 4 },
                 ]
             },
             {
-                rightAnswerId: 1,
+                question: baseCode[4].code,
+                rightAnswerId: 3,
                 id: 5,
                 answers: [
-                    { text: 'Сортировка вставками', id: 1 },
-                    { text: 'Алгоритм Эвклида', id: 2 },
-                    { text: 'Сортировка пузырьком', id: 3 },
-                    { text: 'Сортировка выбором', id: 4 },
+                    { text: baseCode[2].title, id: 1 },
+                    { text: baseCode[1].title, id: 2 },
+                    { text: baseCode[4].title, id: 3 },
+                    { text: baseCode[5].title, id: 4 },
                 ]
             },
             {
+                question: baseCode[5].code,
                 rightAnswerId: 1,
                 id: 6,
                 answers: [
-                    { text: 'Сортировка вставками', id: 1 },
-                    { text: 'Алгоритм Эвклида', id: 2 },
-                    { text: 'Сортировка пузырьком', id: 3 },
-                    { text: 'Сортировка выбором', id: 4 },
+                    { text: baseCode[5].title, id: 1 },
+                    { text: baseCode[10].title, id: 2 },
+                    { text: baseCode[6].title, id: 3 },
+                    { text: baseCode[7].title, id: 4 },
                 ]
             },
             {
-                rightAnswerId: 1,
+                question: baseCode[6].code,
+                rightAnswerId: 4,
                 id: 7,
                 answers: [
-                    { text: 'Сортировка вставками', id: 1 },
-                    { text: 'Алгоритм Эвклида', id: 2 },
-                    { text: 'Сортировка пузырьком', id: 3 },
-                    { text: 'Сортировка выбором', id: 4 },
+                    { text: baseCode[1].title, id: 1 },
+                    { text: baseCode[10].title, id: 2 },
+                    { text: baseCode[11].title, id: 3 },
+                    { text: baseCode[6].title, id: 4 },
                 ]
             },
             {
+                question: baseCode[7].code,
                 rightAnswerId: 1,
                 id: 8,
                 answers: [
-                    { text: 'Сортировка вставками', id: 1 },
-                    { text: 'Алгоритм Эвклида', id: 2 },
-                    { text: 'Сортировка пузырьком', id: 3 },
-                    { text: 'Сортировка выбором', id: 4 },
+                    { text: baseCode[7].title, id: 1 },
+                    { text: baseCode[3].title, id: 2 },
+                    { text: baseCode[5].title, id: 3 },
+                    { text: baseCode[4].title, id: 4 },
                 ]
             },
             {
-                rightAnswerId: 1,
+                question: baseCode[8].code,
+                rightAnswerId: 2,
                 id: 9,
                 answers: [
-                    { text: 'Сортировка вставками', id: 1 },
-                    { text: 'Алгоритм Эвклида', id: 2 },
-                    { text: 'Сортировка пузырьком', id: 3 },
-                    { text: 'Сортировка выбором', id: 4 },
+                    { text: baseCode[1].title, id: 1 },
+                    { text: baseCode[8].title, id: 2 },
+                    { text: baseCode[6].title, id: 3 },
+                    { text: baseCode[5].title, id: 4 },
                 ]
             },
             {
-                rightAnswerId: 1,
+                question: baseCode[9].code,
+                rightAnswerId: 2,
                 id: 10,
                 answers: [
-                    { text: 'Сортировка вставками', id: 1 },
-                    { text: 'Алгоритм Эвклида', id: 2 },
-                    { text: 'Сортировка пузырьком', id: 3 },
-                    { text: 'Сортировка выбором', id: 4 },
+                    { text: baseCode[10].title, id: 1 },
+                    { text: baseCode[9].title, id: 2 },
+                    { text: baseCode[8].title, id: 3 },
+                    { text: baseCode[6].title, id: 4 },
                 ]
             },
             {
-                rightAnswerId: 1,
+                question: baseCode[10].code,
+                rightAnswerId: 3,
                 id: 11,
                 answers: [
-                    { text: 'Сортировка вставками', id: 1 },
-                    { text: 'Алгоритм Эвклида', id: 2 },
-                    { text: 'Сортировка пузырьком', id: 3 },
-                    { text: 'Сортировка выбором', id: 4 },
+                    { text: baseCode[1].title, id: 1 },
+                    { text: baseCode[3].title, id: 2 },
+                    { text: baseCode[10].title, id: 3 },
+                    { text: baseCode[5].title, id: 4 },
                 ]
             },
             {
-                rightAnswerId: 1,
+                question: baseCode[11].code,
+                rightAnswerId: 2,
                 id: 12,
                 answers: [
-                    { text: 'Сортировка вставками', id: 1 },
-                    { text: 'Алгоритм Эвклида', id: 2 },
-                    { text: 'Сортировка пузырьком', id: 3 },
-                    { text: 'Сортировка выбором', id: 4 },
+                    { text: baseCode[1].title, id: 1 },
+                    { text: baseCode[11].title, id: 2 },
+                    { text: baseCode[3].title, id: 3 },
+                    { text: baseCode[6].title, id: 4 },
                 ]
             },
             {
+                question: baseCode[12].code,
                 rightAnswerId: 1,
                 id: 13,
                 answers: [
-                    { text: 'Сортировка вставками', id: 1 },
-                    { text: 'Алгоритм Эвклида', id: 2 },
-                    { text: 'Сортировка пузырьком', id: 3 },
-                    { text: 'Сортировка выбором', id: 4 },
+                    { text: baseCode[12].title, id: 1 },
+                    { text: baseCode[13].title, id: 2 },
+                    { text: baseCode[8].title, id: 3 },
+                    { text: baseCode[7].title, id: 4 },
                 ]
             },
             {
-                rightAnswerId: 1,
+                question: baseCode[13].code,
+                rightAnswerId: 3,
                 id: 14,
                 answers: [
-                    { text: 'Сортировка вставками', id: 1 },
-                    { text: 'Алгоритм Эвклида', id: 2 },
-                    { text: 'Сортировка пузырьком', id: 3 },
-                    { text: 'Сортировка выбором', id: 4 },
+                    { text: baseCode[1].title, id: 1 },
+                    { text: baseCode[7].title, id: 2 },
+                    { text: baseCode[13].title, id: 3 },
+                    { text: baseCode[10].title, id: 4 },
                 ]
             },
         ]
@@ -201,22 +215,32 @@ class Questions extends Component {
         return this.state.activQuest + 1 === this.state.quiz.length
     }
 
+    retryHandler = () => {
+        this.setState({
+            activQuest: 0,
+            answerState: null,
+            isFinished: false,
+            results: {}
+        })
+    }
+
     render() {
         return (
             <div className={classes.questions}>
                 <div className={classes.questionsWrapper}>
-                    <h1>Ответьте на все вопросы</h1>
-
+                    <h1>Answer all questions</h1>
+                    
                     {this.state.isFinished
                         ? <FinishedQuiz
                             results={this.state.results}
                             quiz={this.state.quiz}
+                            onRetry={this.retryHandler}
                         />
                         : <ActivQuestion
                             answers={this.state.quiz[this.state.activQuest].answers}
-                            question={baseCode[this.state.activQuest].code}
+                            question={this.state.quiz[this.state.activQuest].question}
                             onAnswerClick={this.onAnswerClickHandler}
-                            quizLength={baseCode.length}
+                            quizLength={this.state.quiz.length}
                             answerNumber={this.state.activQuest + 1}
                             state={this.state.answerState}
                         />

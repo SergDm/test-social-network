@@ -14,7 +14,8 @@ const ActivQuestion = (props) => {
                     </span>
                 </b>
             </div>
-            <div className={classes.activQuestions}><AnswersList
+            <div className={classes.activQuestions}>
+                <AnswersList
                 answers={props.answers}
                 onAnswerClick={props.onAnswerClick}
                 state={props.state}
