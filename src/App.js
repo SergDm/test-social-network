@@ -15,6 +15,7 @@ import { withSuspense } from './hoc/withSuspense';
 import UsersSearch from './components/Users/UsersSearch';
 import CodeJs from './components/Code/Code';
 import Quiz from './components/Code/Quiz/Quiz';
+import Main from './components/Main/Main';
 
 const DialogsContainer = React.lazy(() => import('./components/Dialogs/DialogsContainer'))
 const ProfileContainer = React.lazy(() => import('./components/Profile/ProfileContainer'))
@@ -33,7 +34,7 @@ class App extends Component {
         <HeaderContainer />
         <Navbar />
         <Switch>
-        <Route exact path='/' render={() => <div><h1>Social network SK</h1></div> } />
+        <Route exact path='/' render={() => <Main /> } />
         <Route path='/profile/:userId?' render={ withSuspense(ProfileContainer) } />
         <Route path='/dialogs' render={ withSuspense(DialogsContainer) } />
         <Route path='/users' render={() => <UsersContainer />} />
