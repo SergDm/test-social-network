@@ -16,6 +16,7 @@ import UsersSearch from './components/Users/UsersSearch';
 import CodeJs from './components/Code/Code';
 import Quiz from './components/Code/Quiz/Quiz';
 import Main from './components/Main/Main';
+import NewsContainer from './components/News/NewsContainer';
 
 const DialogsContainer = React.lazy(() => import('./components/Dialogs/DialogsContainer'))
 const ProfileContainer = React.lazy(() => import('./components/Profile/ProfileContainer'))
@@ -41,6 +42,7 @@ class App extends Component {
         <Route path='/code' render={() => <CodeJs />} />
         <Route path='/userssearch' render={() => <UsersSearch />} />
         <Route path='/quiz' render={() => <Quiz />} />
+        <Route path='/news' render={() => <NewsContainer />} />
         <Route path='/login' render={() => <Login />} />
         </Switch>
         <Footer />
