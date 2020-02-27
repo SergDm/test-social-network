@@ -7,14 +7,11 @@ const instans = axios.create({
 })
 
 const NewsAPI = {
-
     getNews(country = 'ua') {
-
         return instans
             .get(`top-headlines?country=${country}&apiKey=${apiKey}`)
-            .then(response => response.data.articles)
+            .then(response => response.data)
             }
     }
-
 
 export default NewsAPI

@@ -1,7 +1,10 @@
+import NewsAPI from './NewsApi'
+
 const SET_NEWS = 'SET_NEWS'
 
 const initialState = {
-    articles:[]
+    articles:[],
+    country: 'ua'
 }
 
 const newsReducer = (state = initialState, action) => {
@@ -15,5 +18,12 @@ const newsReducer = (state = initialState, action) => {
 }
 
 export const setNewsAC = (articles) => ({type: SET_NEWS, articles})
+
+export const getNews = (country) => {
+    return async (dispatch) => {
+      let data = await NewsAPI.getNews(country)
+      dispatch(setNewsAC(data.articles));
+    }
+  }
 
 export default newsReducer

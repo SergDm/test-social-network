@@ -1,20 +1,31 @@
-import News from './News'
+import React from 'react'
 import { connect } from 'react-redux'
-import { setNewsAC } from './newsReducer'
+import { Component } from 'react'
+import { compose } from 'redux'
+import { getNews } from './newsReducer'
+import News from './News'
+
+class NewsContainer extends Component {
+    componentDidMount() {
+        const { country } = this.props
+        this.props.getNews(country)
+    }
+    render() {
+        return (
+            <div>
+                <News news={this.props.articles}/>
+            </div>
+        )
+    }
+}
+
 
 let mapStateToProps = (state) => {
     return {
-        news: state.newsPage.articles
+        articles: state.newsPage.articles,
+        country: state.newsPage.country
     }
 }
 
-let mapDispatchToProps = (dispatch) => {
-    return {
-        setNews: (articles) => {
-            dispatch(setNewsAC(articles))
-        }
-    }
 
-}
-
-export default connect(mapStateToProps, mapDispatchToProps)(News)
+export default compose(connect(mapStateToProps, { getNews }))(NewsContainer)
