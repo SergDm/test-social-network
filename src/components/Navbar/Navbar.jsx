@@ -20,7 +20,6 @@ const Navbar = (props) => {
         [{ link: '/users', name: 'List' },
         { link: '/userssearch', name: 'Search' }]
       },
-    { link: '/music', name: 'Music' },
     { link: '/news', name: 'News' },
     {link: '/settings', name: 'Settings' }
   ]

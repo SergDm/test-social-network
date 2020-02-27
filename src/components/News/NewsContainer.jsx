@@ -4,6 +4,7 @@ import { Component } from 'react'
 import { compose } from 'redux'
 import { getNews } from './newsReducer'
 import News from './News'
+import Preloader from '../commonn/loader/Preloader'
 
 class NewsContainer extends Component {
     componentDidMount() {
@@ -12,7 +13,9 @@ class NewsContainer extends Component {
     }
     render() {
         return (
+            
             <div>
+                {this.props.isLoad ? <Preloader /> : null}
                 <News news={this.props.articles}/>
             </div>
         )
@@ -23,7 +26,8 @@ class NewsContainer extends Component {
 let mapStateToProps = (state) => {
     return {
         articles: state.newsPage.articles,
-        country: state.newsPage.country
+        country: state.newsPage.country,
+        isLoad: state.newsPage.isLoad
     }
 }
 
