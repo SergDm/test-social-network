@@ -23,7 +23,6 @@
   font-size: 20px;
   text-align: center;
   text-decoration: underline 2px;
-
 }
 
 .friends img {
@@ -33,10 +32,6 @@
 #menuVertical {
   width: 100%;
   height: auto;
-}
-
-#menuVertical a.activ {
-  font-size: 30px;
 }
 
 #menuVertical ul {
@@ -62,7 +57,7 @@
   width: 100%;
   height: auto;
   box-sizing: border-box;
-  font-size: 25px;
+  font-size: 30px;
   color: black;
   line-height: 1.2em;
   padding: 10px 15px;
