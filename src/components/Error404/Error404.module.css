@@ -1,0 +1,31 @@
+.error {
+  display: grid;
+  grid-template-areas: "img text";
+  grid-template-columns: 1fr 2fr;
+  margin-top: 5%;
+  font-size: 25px;
+}
+
+.img404 {
+  grid-area: img;
+  width: 100%;
+  padding: 10px;
+}
+
+.textError {
+  padding: 0 20px 0 10px;
+}
+
+.textError button {
+  padding: 6px 6px;
+  color: white;
+  background: #8DBFE4;
+  border-radius: 5px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.textError button:hover {   
+color: black;
+background: white;
+}

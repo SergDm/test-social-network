@@ -14,11 +14,11 @@ const Navbar = (props) => {
     { link: '/dialogs', name: 'Messages' },
     {link: '#', name: 'CodeJS', bottom:
         [{ link: '/code', name: 'Native JavaScript' },
-        { link: '/quiz', name: 'Quiz' }]
+        { link: '/code/quiz', name: 'Quiz' }]
       },
     {link: '#', name: 'Friends', bottom:
         [{ link: '/users', name: 'List' },
-        { link: '/userssearch', name: 'Search' }]
+        { link: '/users/search', name: 'Search' }]
       },
     { link: '/news', name: 'News' },
     {link: '/settings', name: 'Settings' }

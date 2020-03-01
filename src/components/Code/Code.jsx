@@ -21,7 +21,7 @@ const CodeJs = () => {
   return (
     <div className={classes.code} >
       <p id='top' style={{position: 'absolute'}}></p>
-      <NavLink to={'/quiz'}><button>quiz</button></NavLink>
+      <NavLink to={'/code/quiz'}><button>quiz</button></NavLink>
       <h1><u>Native JavaScript</u></h1>
       <div className={classes.menuCodeMain}>{menuCode}</div>
       {baseCodeMain}
