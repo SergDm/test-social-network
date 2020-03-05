@@ -26,26 +26,15 @@ class ProfileContainer extends React.Component {
     this.props.getStatus(userId);
   }
 
-  // confirmLeave(e) {
-  //   let confirmationMessage = 'Уже уходите?'
-  //   e.returnValue = confirmationMessage
-  //   return confirmationMessage 
-  //   }
-
   componentDidMount() {
     this.refreshProfile()
     this.props.getUsers(1, 100);
-    //window.addEventListener('beforeunload', this.confirmLeave)
   }
 
   componentDidUpdate(prevProps, prevState, snapshot) {
     if (this.props.match.params.userId !== prevProps.match.params.userId) {
       this.refreshProfile()
     }
-  }
-
-  componentWillUnmount() {
-    //window.removeEventListener('beforeunload', this.confirmLeave)
   }
 
   render() {

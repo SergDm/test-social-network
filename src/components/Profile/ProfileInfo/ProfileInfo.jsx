@@ -5,10 +5,12 @@ import ava from '../../Image/ava2.png';
 import ProfileDataForm from './ProfileDataForm';
 import { ProfileData } from './ProfileData';
 import baner from '../../Image/baner.png'
+import ModalWindow from '../../ModalWindow/ModalWindow';
 
 const ProfileInfo = (props) => {
 
   let [editMode, setEditMode] = useState(false)
+  let [isModal, setModal] = useState(false)
 
   if (!props.profile) {
     return <Preloader />
@@ -28,20 +30,22 @@ const ProfileInfo = (props) => {
 
   return (
     <div className={classes.post}>
-      {props.flagBaner && <div>< img className={classes.baner} src={baner} alt='baner' /></div> }
+      {props.flagBaner && <div>< img className={classes.baner} src={baner} alt='baner' /></div>}
       <button className={classes.btnBaner} onClick={props.deleteBaner}>{props.flagBaner ? "delete baner" : 'show baner'}</button>
       <div className={classes.dataFile}>
         <div className={classes.left}>
-            <div>
-              < img className={classes.profileFoto} src={props.profile.photos.large ? props.profile.photos.large : ava}
-                alt='photos' />
-            </div>
-            <div>
-              {props.isOwner && <label className={classes.customFileUpload}>
-                <input className={classes.inputfile} type='file' id='photo' onChange={onMainPhotoSelect} />
-                Upload photo
+          <div>
+            {isModal && <ModalWindow setModal={() => setModal(false)} foto={props.profile.photos.large} />}
+            < img className={classes.profileFoto}
+              src={props.profile.photos.large ? props.profile.photos.large : ava}
+              alt='photos' onClick={() => setModal(true)} />
+          </div>
+          <div>
+            {props.isOwner && <label className={classes.customFileUpload}>
+              <input className={classes.inputfile} type='file' id='photo' onChange={onMainPhotoSelect} />
+              Upload photo
               </label>}
-            </div>
+          </div>
         </div>
         <div className={classes.center}>
           {!editMode
@@ -56,9 +60,9 @@ const ProfileInfo = (props) => {
               onSubmit={onSubmit}
               initialValues={props.profile} />}
         </div>
-          <div className={classes.right}><h1>Additional Information</h1></div>
+        <div className={classes.right}><h1>Additional Information</h1></div>
       </div>
-      {props.flagBaner && <div>< img className={classes.baner} src={baner} alt='baner' /></div> }
+      {props.flagBaner && <div>< img className={classes.baner} src={baner} alt='baner' /></div>}
     </div>
   )
 }

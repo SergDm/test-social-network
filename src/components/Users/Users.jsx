@@ -2,7 +2,7 @@ import React from 'react';
 import classes from './Users.module.css';
 import Paginator from '../commonn/Paginator/Paginator';
 import User from './User';
-import { NavLink } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 
 const Users = (props) => {
@@ -10,7 +10,7 @@ const Users = (props) => {
   return (
     <div>
       <div>
-      <NavLink to={'/users/search'}><button className={classesSum} >Search</button></NavLink>
+      <Link to={'/users/search'}><button className={classesSum} >Search</button></Link>
         <Paginator currentPage={props.currentPage}
           onPageChanged={props.onPageChanged}
           pageSize={props.pageSize}

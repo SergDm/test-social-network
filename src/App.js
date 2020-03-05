@@ -18,9 +18,9 @@ import Quiz from './components/Code/Quiz/Quiz';
 import Main from './components/Main/Main';
 import NewsContainer from './components/News/NewsContainer';
 import Error from './components/Error404/Error404';
+import ProfileContainer from './components/Profile/ProfileContainer';
 
 const DialogsContainer = React.lazy(() => import('./components/Dialogs/DialogsContainer'))
-const ProfileContainer = React.lazy(() => import('./components/Profile/ProfileContainer'))
 
 
 class App extends Component {
@@ -37,7 +37,7 @@ class App extends Component {
         <Navbar />
         <Switch>
         <Route exact path='/' render={() => <Main /> } />
-        <Route path='/profile/:userId?' render={ withSuspense(ProfileContainer) } />
+        <Route path='/profile/:userId?' render={() => <ProfileContainer />} />
         <Route path='/dialogs' render={ withSuspense(DialogsContainer) } />
         <Route path='/users/search' render={() => <UsersSearch />} />
         <Route path='/users' render={() => <UsersContainer />} />

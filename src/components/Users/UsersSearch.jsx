@@ -5,7 +5,7 @@ import { getUser, getTotalUsersCount, getCurrentPage } from '../../data/usersSel
 import { getUsers } from '../../data/usersReducer';
 import classes from './Users.module.css';
 import Paginator from '../commonn/Paginator/Paginator';
-import { NavLink } from 'react-router-dom';
+import { NavLink, Link } from 'react-router-dom';
 import ava from '../Image/ava2.png';
 
 class UsersSearch extends Component {
@@ -56,7 +56,7 @@ class UsersSearch extends Component {
 
     return (
       <div>
-        <NavLink to={'/users'}><button className={classes.button}>Back</button></NavLink>
+        <Link to={'/users'}><button className={classes.button}>Back</button></Link>
         <div>
           <Paginator currentPage={this.props.currentPage}
             onPageChanged={this.onPageChanged}

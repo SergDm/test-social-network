@@ -1,7 +1,7 @@
 import React from 'react'
 import err from '../Image/404.png'
 import classes from './Error404.module.css'
-import { NavLink } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 const Error = () => {
   return (
@@ -17,7 +17,7 @@ const Error = () => {
         <li>адрес с ошибкой. Например, вы набрали его с ошибкой или же перешли с другого сайта, где он указан с ошибкой;</li>
         <li>страницы никогда не было. На нашем сайте есть много других полезных и нужных страниц.</li>
         <hr/>
-        <NavLink to={'/'}><button>Перейти на главную страницу</button></NavLink>
+        <Link to={'/'}><button>Перейти на главную страницу</button></Link>
         </ul>
       </div>
     </div>

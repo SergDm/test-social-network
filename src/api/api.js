@@ -1,7 +1,6 @@
 import *as axios from 'axios';
 
 //'45bee115-3d4f-4239-93fc-d0d902e37977' test
-//'f39f2c19-8228-4248-b97e-52ddf08aa596' main
 
 const instans = axios.create({
   withCredentials: true,
