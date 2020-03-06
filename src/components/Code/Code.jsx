@@ -1,10 +1,27 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import classes from './Code.module.css'
 import './BaseCode.css'
 import baseCode from './BaseCode'
 import { NavLink } from 'react-router-dom'
 
 const CodeJs = () => {
+
+  const [isTop, setTop] = useState(false)
+
+  const handleScroll = () => {
+    if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+      setTop(true)
+    } else {
+      setTop(false)
+    }
+  }
+
+  useEffect(() => {
+    document.addEventListener('scroll', handleScroll)
+    return () => {
+      document.removeEventListener('scroll', handleScroll)
+    }
+  })
 
   const baseCodeMain = baseCode.sort((a, b) => a.id - b.id).map(data =>
     <div id={data.id} key={data.id}>
@@ -18,6 +35,8 @@ const CodeJs = () => {
   <a className={classes.menuCode} href={`#` + item.id} key={item.id}>{item.title}</a>
     )
 
+  const classButton = `${classes.buttonTop} fa fa-arrow-up`;
+
   return (
     <div className={classes.code} >
       <p id='top' style={{position: 'absolute'}}></p>
@@ -25,7 +44,7 @@ const CodeJs = () => {
       <h1><u>Native JavaScript</u></h1>
       <div className={classes.menuCodeMain}>{menuCode}</div>
       {baseCodeMain}
-      <a className={classes.buttonTop} href="#top">Up</a>
+      {isTop && <a className={classButton} href="#top">Up</a>}
     </div>
   )
 }
