@@ -6,6 +6,7 @@ const SET_USER_PROFILE = 'SET-USER-PROFILE';
 const SET_STATUS = 'SET_STATUS';
 const DELETE_POST = 'DELETE_POST';
 const SAVE_PHOTO_SUCCESS = 'SAVE_PHOTO_SUCCESS';
+const LIKE_PLUS = 'LIKE_PLUS';
 
 
 let initialState = {
@@ -27,7 +28,7 @@ export const profileReducer = (state = initialState, action) => {
 
     case ADD_POST:
       let newPost = {
-        id: Math.random(),
+        id: new Date(),
         name: 'you',
         message: action.newPostText,
         likeCount: 0
@@ -51,6 +52,13 @@ export const profileReducer = (state = initialState, action) => {
         status: action.status
       };
 
+    case LIKE_PLUS:
+      return {
+        ...state,
+        postData: [...state.postData.map((el) =>
+          (el.id !== action.postId) ? el : Object.assign({}, el, { likeCount: el.likeCount + 1 }))]
+      }
+
     case DELETE_POST:
       return {
         ...state,
@@ -60,7 +68,7 @@ export const profileReducer = (state = initialState, action) => {
     case SAVE_PHOTO_SUCCESS:
       return {
         ...state,
-        profile: {...state.profile, photos: action.photos }
+        profile: { ...state.profile, photos: action.photos }
       }
 
     default:
@@ -77,6 +85,20 @@ export const setStatus = (status) => ({ type: SET_STATUS, status })
 export const deletePost = (postId) => ({ type: DELETE_POST, postId })
 
 export const savePhotoSuccess = (photos) => ({ type: SAVE_PHOTO_SUCCESS, photos })
+
+export const likePlus = (postId) => ({ type: LIKE_PLUS, postId })
+
+export const addPost = (newPostText) => (dispatch) => {
+  dispatch(addPostActionCreator(newPostText))
+}
+
+export const likePlusAdd = (id) => (dispatch) => {
+  dispatch(likePlus(id))
+}
+
+export const delPost = (id) => (dispatch) => {
+  dispatch(deletePost(id))
+}
 
 export const getUserProfile = (userId) => async (dispatch) => {
   let response = await profileAPI.getProfile(userId)
@@ -112,7 +134,7 @@ export const saveProfile = (profile) => async (dispatch, getState) => {
 
   if (response.data.resultCode === 0) {
     dispatch(getUserProfile(userId))
-  } else if(response.data.resultCode === 1) {
+  } else if (response.data.resultCode === 1) {
     dispatch(stopSubmit('editProfile', { _error: response.data.messages[0] }))
     return Promise.reject(response.data.messages[0])
   }

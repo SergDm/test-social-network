@@ -16,21 +16,23 @@ let initialState = {
     { id: 4, name: 'User4' },
     { id: 5, name: 'User5' },
   ],
+  newMessageBody: ''
 }
 
 
 export const dialogsReducer = (state = initialState, action) => {
 
   switch (action.type) {
-    
+
     case SEND_MESSAGE:
       let body = action.newMessageBody;
       return {
         ...state,
         messageData: [
           ...state.messageData,
-          { id: Math.random(), message: body }
-        ]
+          { id: new Date(), message: body }
+        ],
+        newMessageBody: ''
       };
 
     default:
@@ -39,3 +41,7 @@ export const dialogsReducer = (state = initialState, action) => {
 }
 
 export const sendMessageCreator = (newMessageBody) => ({ type: SEND_MESSAGE, newMessageBody })
+
+export const sendMessage = (newMessageBody) => (dispatch) => {
+  dispatch(sendMessageCreator(newMessageBody))
+}

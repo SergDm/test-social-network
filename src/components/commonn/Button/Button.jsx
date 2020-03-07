@@ -8,13 +8,16 @@ const Button = ({ type, event, disabled, name }) => {
     switch (type) {
 
       case 'baner':
-        return classes.btnBaner;
+        return classes.button + ' ' + classes.btnBaner;
 
       case 'search':
         return classes.button + ' ' + classes.buttonSearch;
 
       case 'log':
-        return classes.button + ' ' + classes.btnLogout
+        return classes.button + ' ' + classes.btnLogout;
+
+      case 'delete':
+        return `${classes.btnDelete} fa fa-times`;
 
       default:
         return classes.button;
