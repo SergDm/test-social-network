@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import classes from './Code.module.css'
 import './BaseCode.css'
-import baseCode from './BaseCode'
+import {codesJS} from './BaseCode'
 import { NavLink } from 'react-router-dom'
 
 const CodeJs = () => {
@@ -23,7 +23,7 @@ const CodeJs = () => {
     }
   })
 
-  const baseCodeMain = baseCode.sort((a, b) => a.id - b.id).map(data =>
+  const baseCodeMain = codesJS.sort((a, b) => a.id - b.id).map(data =>
     <div id={data.id} key={data.id}>
       <h2><u>{data.title}</u></h2>
       {data.code}
@@ -31,7 +31,7 @@ const CodeJs = () => {
         <b>{data.href}</b></a>
     </div>)
   
-  const menuCode = baseCode.map(item => 
+  const menuCode = codesJS.map(item => 
   <a className={classes.menuCode} href={`#` + item.id} key={item.id}>{item.title}</a>
     )
 

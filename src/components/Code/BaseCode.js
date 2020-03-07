@@ -1,6 +1,6 @@
 import React from 'react'
 
-const baseCode = [
+export const codesJS = [
     {
         id: 1,
         title: 'Insertion Sort',
@@ -319,4 +319,161 @@ const baseCode = [
     }
 ]
 
-export default baseCode
+const quiz = [
+    {
+        question: codesJS[0].code,
+        rightAnswerId: 2,
+        id: 1,
+        answers: [
+            { text: codesJS[2].title, id: 1 },
+            { text: codesJS[0].title, id: 2 },
+            { text: codesJS[4].title, id: 3 },
+            { text: codesJS[6].title, id: 4 },
+        ]
+    },
+    {
+        question: codesJS[1].code,
+        rightAnswerId: 3,
+        id: 2,
+        answers: [
+            { text: codesJS[11].title, id: 1 },
+            { text: codesJS[13].title, id: 2 },
+            { text: codesJS[1].title, id: 3 },
+            { text: codesJS[2].title, id: 4 },
+        ]
+    },
+    {
+        question: codesJS[2].code,
+        rightAnswerId: 1,
+        id: 3,
+        answers: [
+            { text: codesJS[2].title, id: 1 },
+            { text: codesJS[10].title, id: 2 },
+            { text: codesJS[1].title, id: 3 },
+            { text: codesJS[0].title, id: 4 },
+        ]
+    },
+    {
+        question: codesJS[3].code,
+        rightAnswerId: 4,
+        id: 4,
+        answers: [
+            { text: codesJS[10].title, id: 1 },
+            { text: codesJS[11].title, id: 2 },
+            { text: codesJS[12].title, id: 3 },
+            { text: codesJS[3].title, id: 4 },
+        ]
+    },
+    {
+        question: codesJS[4].code,
+        rightAnswerId: 3,
+        id: 5,
+        answers: [
+            { text: codesJS[2].title, id: 1 },
+            { text: codesJS[1].title, id: 2 },
+            { text: codesJS[4].title, id: 3 },
+            { text: codesJS[5].title, id: 4 },
+        ]
+    },
+    {
+        question: codesJS[5].code,
+        rightAnswerId: 1,
+        id: 6,
+        answers: [
+            { text: codesJS[5].title, id: 1 },
+            { text: codesJS[10].title, id: 2 },
+            { text: codesJS[6].title, id: 3 },
+            { text: codesJS[7].title, id: 4 },
+        ]
+    },
+    {
+        question: codesJS[6].code,
+        rightAnswerId: 4,
+        id: 7,
+        answers: [
+            { text: codesJS[1].title, id: 1 },
+            { text: codesJS[10].title, id: 2 },
+            { text: codesJS[11].title, id: 3 },
+            { text: codesJS[6].title, id: 4 },
+        ]
+    },
+    {
+        question: codesJS[7].code,
+        rightAnswerId: 1,
+        id: 8,
+        answers: [
+            { text: codesJS[7].title, id: 1 },
+            { text: codesJS[3].title, id: 2 },
+            { text: codesJS[5].title, id: 3 },
+            { text: codesJS[4].title, id: 4 },
+        ]
+    },
+    {
+        question: codesJS[8].code,
+        rightAnswerId: 2,
+        id: 9,
+        answers: [
+            { text: codesJS[1].title, id: 1 },
+            { text: codesJS[8].title, id: 2 },
+            { text: codesJS[6].title, id: 3 },
+            { text: codesJS[5].title, id: 4 },
+        ]
+    },
+    {
+        question: codesJS[9].code,
+        rightAnswerId: 2,
+        id: 10,
+        answers: [
+            { text: codesJS[10].title, id: 1 },
+            { text: codesJS[9].title, id: 2 },
+            { text: codesJS[8].title, id: 3 },
+            { text: codesJS[6].title, id: 4 },
+        ]
+    },
+    {
+        question: codesJS[10].code,
+        rightAnswerId: 3,
+        id: 11,
+        answers: [
+            { text: codesJS[1].title, id: 1 },
+            { text: codesJS[3].title, id: 2 },
+            { text: codesJS[10].title, id: 3 },
+            { text: codesJS[5].title, id: 4 },
+        ]
+    },
+    {
+        question: codesJS[11].code,
+        rightAnswerId: 2,
+        id: 12,
+        answers: [
+            { text: codesJS[1].title, id: 1 },
+            { text: codesJS[11].title, id: 2 },
+            { text: codesJS[3].title, id: 3 },
+            { text: codesJS[6].title, id: 4 },
+        ]
+    },
+    {
+        question: codesJS[12].code,
+        rightAnswerId: 1,
+        id: 13,
+        answers: [
+            { text: codesJS[12].title, id: 1 },
+            { text: codesJS[13].title, id: 2 },
+            { text: codesJS[8].title, id: 3 },
+            { text: codesJS[7].title, id: 4 },
+        ]
+    },
+    {
+        question: codesJS[13].code,
+        rightAnswerId: 3,
+        id: 14,
+        answers: [
+            { text: codesJS[1].title, id: 1 },
+            { text: codesJS[7].title, id: 2 },
+            { text: codesJS[13].title, id: 3 },
+            { text: codesJS[10].title, id: 4 },
+        ]
+    },
+]
+
+export default quiz
