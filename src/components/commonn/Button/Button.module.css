@@ -7,7 +7,36 @@
   cursor: pointer;
 }
 
-.button:hover {   
+.btnLogout {
+  background-color: #4B0082;
+  padding: 5px 15px;
+}
+
+.btnBaner {
+  position: absolute;
+  transform: translate(200%, -100%);
+  background-color: #8DBFE4;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  padding: 1px 3px;
+}
+
+.buttonSearch {
+  padding: 5px 20px;
+  background-image: url("../../Image/search.png");
+  background-repeat: no-repeat;
+}
+
+.button .btnBaner:hover {
   color: black;
   background: white;
+}
+
+.buttonSearch:hover {
+  color: black;
+  background-color: white;
+  background-image: url("../../Image/search.png");
+  background-repeat: no-repeat;
 }

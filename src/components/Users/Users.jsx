@@ -7,12 +7,12 @@ import Button from '../commonn/Button/Button';
 
 
 const Users = (props) => {
-  const classesSum = classes.button + ' ' + classes.buttonSearch;
+  
   return (
     <div>
       <div>
         <Link to={'/users/search'}>
-          <Button name='Search' style={classesSum} />
+          <Button name='Search' type='search' />
         </Link>
         <Paginator currentPage={props.currentPage}
           onPageChanged={props.onPageChanged}

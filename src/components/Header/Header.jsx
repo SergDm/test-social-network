@@ -2,16 +2,27 @@ import React from 'react';
 import classes from './Header.module.css';
 import image from '../Image/logo2.png';
 import { Link } from 'react-router-dom';
+import Button from '../commonn/Button/Button';
 
 const Header = (props) => {
   return <header className={classes.header}>
-    <a href='/'>
+    <Link to={'/'}>
       < img src={image} alt='logo' />
-    </a>
+    </Link>
     <div className={classes.loginBlock}>
-      { props.isAuth 
-      ? <div>{props.login}<button className={classes.button} onClick={props.logout}>Log Out</button> </div> 
-      : <Link to= {'/login'}>Login</Link> }
+      {props.isAuth
+        ? <div>
+          {props.login}
+          <Button
+            name='Logout'
+            event={props.logout}
+            type='log' />
+        </div>
+        : <Link to={'/login'}>
+          <Button
+            name='Login'
+            type='log' />
+        </Link>}
     </div>
   </header>;
 }

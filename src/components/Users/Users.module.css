@@ -72,18 +72,6 @@
   padding: 6px;
 }
 
-.buttonSearch {
-  background-image: url("../Image/search.png");
-  background-repeat: no-repeat;
-}
-
-.buttonSearch:hover {
-  color: black;
-  background-color: white;
-  background-image: url("../Image/search.png");
-  background-repeat: no-repeat;
-}
-
 input[type=text] {
   -webkit-transition: width 0.4s ease-in-out;
   transition: width 0.4s ease-in-out;

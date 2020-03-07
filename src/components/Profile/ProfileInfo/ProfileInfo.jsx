@@ -35,7 +35,7 @@ const ProfileInfo = (props) => {
       <Button 
       name={props.flagBaner ? "delete baner" : 'show baner'} 
       event={props.deleteBaner}
-      style= {classes.btnBaner}
+      type='baner'
       />
       <div className={classes.dataFile}>
         <div className={classes.left}>
