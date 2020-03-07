@@ -26,7 +26,9 @@ const MyPosts = (props) => {
       message={post.message}
       likeCount={post.likeCount}
       onDeletePost={onDeletePost}
-      onLikePlus={onLikePlus} />)
+      onLikePlus={onLikePlus} 
+      likeTouch={post.likeTouch}
+      />)
 
   return (
     <div className={classes.myPost}>

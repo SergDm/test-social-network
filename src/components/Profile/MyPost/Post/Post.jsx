@@ -16,6 +16,7 @@ const Post = (props) => {
         <input type="image"
           src={button}
           alt='button'
+          disabled= {props.likeTouch}
           onClick={() => props.onLikePlus(props.id)} />
         {props.likeCount}
       </div>

@@ -11,9 +11,9 @@ const LIKE_PLUS = 'LIKE_PLUS';
 
 let initialState = {
   postData: [
-    { id: 1, name: 'Bill', message: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi officia, doloribus, fugit consequatur laudantium veritatis, facilis minima nihil nostrum natus a?', likeCount: 15 },
-    { id: 2, name: 'Joe', message: "It's my first post", likeCount: 10 },
-    { id: 3, name: 'Sam', message: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi officia, doloribus, fugit consequatur laudantium veritatis, facilis minima nihil nostrum natus a? Adipisci consequatur maiores magnam velit, doloribus illum officia eligendi.", likeCount: 1 }
+    { id: 1, name: 'Bill', message: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi officia, doloribus, fugit consequatur laudantium veritatis, facilis minima nihil nostrum natus a?', likeCount: 15, likeTouch: false },
+    { id: 2, name: 'Joe', message: "It's my first post", likeCount: 10, likeTouch: false },
+    { id: 3, name: 'Sam', message: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi officia, doloribus, fugit consequatur laudantium veritatis, facilis minima nihil nostrum natus a? Adipisci consequatur maiores magnam velit, doloribus illum officia eligendi.", likeCount: 1, likeTouch: false }
   ],
 
   profile: null,
@@ -28,10 +28,11 @@ export const profileReducer = (state = initialState, action) => {
 
     case ADD_POST:
       let newPost = {
-        id: new Date(),
+        id: state.postData.length + 1,
         name: 'you',
         message: action.newPostText,
-        likeCount: 0
+        likeCount: 0,
+        likeTouch: false
       };
 
       return {
@@ -56,7 +57,7 @@ export const profileReducer = (state = initialState, action) => {
       return {
         ...state,
         postData: [...state.postData.map((el) =>
-          (el.id !== action.postId) ? el : Object.assign({}, el, { likeCount: el.likeCount + 1 }))]
+          (el.id !== action.postId) ? el : Object.assign({}, el, { likeCount: el.likeCount + 1, likeTouch: true }))]
       }
 
     case DELETE_POST:

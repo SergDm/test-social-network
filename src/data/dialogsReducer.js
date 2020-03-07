@@ -30,7 +30,7 @@ export const dialogsReducer = (state = initialState, action) => {
         ...state,
         messageData: [
           ...state.messageData,
-          { id: new Date(), message: body }
+          { id: state.messageData.length + 1, message: body }
         ],
         newMessageBody: ''
       };
