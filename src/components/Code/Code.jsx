@@ -3,6 +3,7 @@ import classes from './Code.module.css'
 import './BaseCode.css'
 import {codesJS} from './BaseCode'
 import { NavLink } from 'react-router-dom'
+import Button from '../commonn/Button/Button'
 
 const CodeJs = () => {
 
@@ -40,7 +41,7 @@ const CodeJs = () => {
   return (
     <div className={classes.code} >
       <p id='top' style={{position: 'absolute'}}></p>
-      <NavLink to={'/code/quiz'}><button>quiz</button></NavLink>
+      <NavLink to={'/code/quiz'}><Button name='QUIZ'/></NavLink>
       <h1><u>Native JavaScript</u></h1>
       <div className={classes.menuCodeMain}>{menuCode}</div>
       {baseCodeMain}

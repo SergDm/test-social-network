@@ -6,6 +6,7 @@ import ProfileDataForm from './ProfileDataForm';
 import { ProfileData } from './ProfileData';
 import baner from '../../Image/baner.png'
 import ModalWindow from '../../ModalWindow/ModalWindow';
+import Button from '../../commonn/Button/Button';
 
 const ProfileInfo = (props) => {
 
@@ -31,7 +32,11 @@ const ProfileInfo = (props) => {
   return (
     <div className={classes.post}>
       {props.flagBaner && <div>< img className={classes.baner} src={baner} alt='baner' /></div>}
-      <button className={classes.btnBaner} onClick={props.deleteBaner}>{props.flagBaner ? "delete baner" : 'show baner'}</button>
+      <Button 
+      name={props.flagBaner ? "delete baner" : 'show baner'} 
+      event={props.deleteBaner}
+      style= {classes.btnBaner}
+      />
       <div className={classes.dataFile}>
         <div className={classes.left}>
           <div>

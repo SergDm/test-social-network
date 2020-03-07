@@ -7,6 +7,7 @@ import classes from './Users.module.css';
 import Paginator from '../commonn/Paginator/Paginator';
 import { NavLink, Link } from 'react-router-dom';
 import ava from '../Image/ava2.png';
+import Button from '../commonn/Button/Button';
 
 class UsersSearch extends Component {
 
@@ -56,7 +57,7 @@ class UsersSearch extends Component {
 
     return (
       <div>
-        <Link to={'/users'}><button className={classes.button}>Back</button></Link>
+        <Link to={'/users'}><Button name='BACK' /></Link>
         <div>
           <Paginator currentPage={this.props.currentPage}
             onPageChanged={this.onPageChanged}
@@ -64,8 +65,14 @@ class UsersSearch extends Component {
             totalItemsCount={this.props.totalUsersCount} />
         </div>
         <div align='center'>
-          <div className={classes.button}><b>Search by name or ID: </b><input type="text" onChange={this.hadlerInput} placeholder={'Enter name or ID'}
-          ></input></div>
+          <div className={classes.button}>
+            <b>Search by name or ID: </b>
+            <input
+              type="text"
+              onChange={this.hadlerInput}
+              placeholder={'Enter name or ID'}>
+            </input>
+          </div>
         </div>
         <div>{foundUserId}</div>
         <div>{foundUserName}</div>

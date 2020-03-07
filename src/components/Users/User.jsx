@@ -2,8 +2,11 @@ import React from 'react';
 import ava from '../Image/ava2.png';
 import { NavLink } from 'react-router-dom';
 import classes from './Users.module.css'
+import Button from '../commonn/Button/Button';
 
 const User = ({ user, followingInProgress, unfollow, follow }) => {
+
+const followingDisabled = followingInProgress.some(id => id === user.id)
 
   return (
     <div className={classes.usersColum}>
@@ -15,8 +18,8 @@ const User = ({ user, followingInProgress, unfollow, follow }) => {
         </div>
         <div>
           {user.followed
-            ? <button className={classes.button} disabled={followingInProgress.some(id => id === user.id)} onClick={() => { unfollow(user.id) }}>Unfollow</button>
-            : <button className={classes.button} disabled={followingInProgress.some(id => id === user.id)} onClick={() => { follow(user.id) }}>Follow</button>}
+            ? <Button name='Unfollow' event={() => { unfollow(user.id) }} disabled={followingDisabled}/>
+            : <Button name='Follow' event={() => { follow(user.id) }} disabled={followingDisabled}/>}
         </div>
       </span>
       <span>

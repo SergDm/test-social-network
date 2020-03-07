@@ -29,7 +29,7 @@ export const dialogsReducer = (state = initialState, action) => {
         ...state,
         messageData: [
           ...state.messageData,
-          { id: Math.floor(Math.random() * 10), message: body }
+          { id: Math.random(), message: body }
         ]
       };
 

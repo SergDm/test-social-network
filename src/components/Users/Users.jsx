@@ -3,6 +3,7 @@ import classes from './Users.module.css';
 import Paginator from '../commonn/Paginator/Paginator';
 import User from './User';
 import { Link } from 'react-router-dom';
+import Button from '../commonn/Button/Button';
 
 
 const Users = (props) => {
@@ -10,7 +11,9 @@ const Users = (props) => {
   return (
     <div>
       <div>
-      <Link to={'/users/search'}><button className={classesSum} >Search</button></Link>
+        <Link to={'/users/search'}>
+          <Button name='Search' style={classesSum} />
+        </Link>
         <Paginator currentPage={props.currentPage}
           onPageChanged={props.onPageChanged}
           pageSize={props.pageSize}
@@ -18,13 +21,13 @@ const Users = (props) => {
       </div>
       <div className={classes.users}>
         {
-        props.users.map(user => <User user={user}
-          key={user.id}
-          followingInProgress={props.followingInProgress}
-          unfollow={props.unfollow}
-          follow={props.follow} />
-        )
-      }
+          props.users.map(user => <User user={user}
+            key={user.id}
+            followingInProgress={props.followingInProgress}
+            unfollow={props.unfollow}
+            follow={props.follow} />
+          )
+        }
       </div>
     </div>
   )

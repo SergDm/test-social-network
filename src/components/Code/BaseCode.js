@@ -298,24 +298,24 @@ export const codesJS = [
         id: 14,
         title: 'Timer',
         href: 'https://repl.it/@SergDm/Timer',
-        code: <div class="javascript"><ol><li class="li1"><div class="de1"><span class="kw2">class</span> MyTimer <span class="br0">&#123;</span></div></li>
-            <li class="li1"><div class="de1">&nbsp; &nbsp; constructor<span class="br0">&#40;</span>t<span class="sy0">,</span> s <span class="sy0">=</span> <span class="nu0">0</span><span class="br0">&#41;</span> <span class="br0">&#123;</span></div></li>
-            <li class="li1"><div class="de1">&nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">this</span>.<span class="me1">time</span> <span class="sy0">=</span> t<span class="sy0">;</span></div></li>
-            <li class="li1"><div class="de1">&nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">this</span>.<span class="kw3">stop</span> <span class="sy0">=</span> s<span class="sy0">;</span></div></li>
-            <li class="li1"><div class="de1">&nbsp; &nbsp; <span class="br0">&#125;</span></div></li>
-            <li class="li1"><div class="de1">&nbsp; &nbsp; tick<span class="br0">&#40;</span><span class="br0">&#41;</span> <span class="br0">&#123;</span></div></li>
-            <li class="li1"><div class="de1">&nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">this</span>.<span class="me1">time</span> <span class="sy0">-=</span> <span class="nu0">1</span><span class="sy0">;</span></div></li>
-            <li class="li1"><div class="de1">&nbsp; &nbsp; &nbsp; &nbsp; console.<span class="me1">log</span><span class="br0">&#40;</span><span class="kw1">this</span>.<span class="me1">time</span><span class="br0">&#41;</span></div></li>
-            <li class="li1"><div class="de1">&nbsp; &nbsp; <span class="br0">&#125;</span></div></li>
-            <li class="li1"><div class="de1">&nbsp; &nbsp; run<span class="br0">&#40;</span><span class="br0">&#41;</span> <span class="br0">&#123;</span></div></li>
-            <li class="li1"><div class="de1">&nbsp; &nbsp; &nbsp; &nbsp; setInterval<span class="br0">&#40;</span><span class="br0">&#40;</span><span class="br0">&#41;</span> <span class="sy0">=&gt;</span> <span class="br0">&#40;</span><span class="kw1">this</span>.<span class="me1">time</span> <span class="sy0">&lt;=</span> <span class="kw1">this</span>.<span class="kw3">stop</span><span class="br0">&#41;</span> </div></li>
-            <li class="li1"><div class="de1">&nbsp; &nbsp; &nbsp; &nbsp; <span class="sy0">?</span> clearInterval<span class="br0">&#40;</span><span class="kw1">this</span>.<span class="me1">run</span><span class="br0">&#41;</span> <span class="sy0">:</span> <span class="kw1">this</span>.<span class="me1">tick</span><span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">,</span> <span class="nu0">1000</span><span class="br0">&#41;</span></div></li>
-            <li class="li1"><div class="de1">&nbsp; &nbsp; <span class="br0">&#125;</span></div></li>
-            <li class="li1"><div class="de1"><span class="br0">&#125;</span></div></li>
-            <li class="li1"><div class="de1">&nbsp;</div></li>
-            <li class="li1"><div class="de1">let timer <span class="sy0">=</span> <span class="kw2">new</span> MyTimer<span class="br0">&#40;</span><span class="nu0">10</span><span class="br0">&#41;</span></div></li>
-            <li class="li1"><div class="de1">timer.<span class="me1">run</span><span class="br0">&#40;</span><span class="br0">&#41;</span></div></li>
-        </ol></div>
+        code: <div className="javascript"><ol><li className="li1"><div className="de1"><span className="kw2">class</span> MyTimer <span className="br0">&#123;</span></div></li>
+        <li className="li1"><div className="de1">&nbsp; &nbsp; constructor<span className="br0">&#40;</span>t<span className="sy0">,</span> s <span className="sy0">=</span> <span className="nu0">0</span><span className="br0">&#41;</span> <span className="br0">&#123;</span></div></li>
+        <li className="li1"><div className="de1">&nbsp; &nbsp; &nbsp; &nbsp; <span className="kw1">this</span>.<span className="me1">time</span> <span className="sy0">=</span> t<span className="sy0">;</span></div></li>
+        <li className="li1"><div className="de1">&nbsp; &nbsp; &nbsp; &nbsp; <span className="kw1">this</span>.<span className="kw3">stop</span> <span className="sy0">=</span> s<span className="sy0">;</span></div></li>
+        <li className="li1"><div className="de1">&nbsp; &nbsp; <span className="br0">&#125;</span></div></li>
+        <li className="li1"><div className="de1">&nbsp; &nbsp; tick<span className="br0">&#40;</span><span className="br0">&#41;</span> <span className="br0">&#123;</span></div></li>
+        <li className="li1"><div className="de1">&nbsp; &nbsp; &nbsp; &nbsp; <span className="kw1">this</span>.<span className="me1">time</span> <span className="sy0">-=</span> <span className="nu0">1</span><span className="sy0">;</span></div></li>
+        <li className="li1"><div className="de1">&nbsp; &nbsp; &nbsp; &nbsp; console.<span className="me1">log</span><span className="br0">&#40;</span><span className="kw1">this</span>.<span className="me1">time</span><span className="br0">&#41;</span></div></li>
+        <li className="li1"><div className="de1">&nbsp; &nbsp; <span className="br0">&#125;</span></div></li>
+        <li className="li1"><div className="de1">&nbsp; &nbsp; run<span className="br0">&#40;</span><span className="br0">&#41;</span> <span className="br0">&#123;</span></div></li>
+        <li className="li1"><div className="de1">&nbsp; &nbsp; &nbsp; &nbsp; setInterval<span className="br0">&#40;</span><span className="br0">&#40;</span><span className="br0">&#41;</span> <span className="sy0">=&gt;</span> <span className="br0">&#40;</span><span className="kw1">this</span>.<span className="me1">time</span> <span className="sy0">&lt;=</span> <span className="kw1">this</span>.<span className="kw3">stop</span><span className="br0">&#41;</span> </div></li>
+        <li className="li1"><div className="de1">&nbsp; &nbsp; &nbsp; &nbsp; <span className="sy0">?</span> clearInterval<span className="br0">&#40;</span><span className="kw1">this</span>.<span className="me1">run</span><span className="br0">&#41;</span> <span className="sy0">:</span> <span className="kw1">this</span>.<span className="me1">tick</span><span className="br0">&#40;</span><span className="br0">&#41;</span><span className="sy0">,</span> <span className="nu0">1000</span><span className="br0">&#41;</span></div></li>
+        <li className="li1"><div className="de1">&nbsp; &nbsp; <span className="br0">&#125;</span></div></li>
+        <li className="li1"><div className="de1"><span className="br0">&#125;</span></div></li>
+        <li className="li1"><div className="de1">&nbsp;</div></li>
+        <li className="li1"><div className="de1">let timer <span className="sy0">=</span> <span className="kw2">new</span> MyTimer<span className="br0">&#40;</span><span className="nu0">10</span><span className="br0">&#41;</span></div></li>
+        <li className="li1"><div className="de1">timer.<span className="me1">run</span><span className="br0">&#40;</span><span className="br0">&#41;</span></div></li>
+    </ol></div>
     }
 ]
 

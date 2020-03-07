@@ -1,11 +1,12 @@
 import React from 'react'
 import classes from './ProfileInfo.module.css';
 import ProfileStatusWithHooks from './ProfileStatusWithHooks';
+import Button from '../../commonn/Button/Button';
 
 export const ProfileData = ({ profile, status, updateStatus, isOwner, goToEditMode }) => {
     return (
         <div className={classes.post2}>
-            {isOwner && <div><button className={classes.customFileUpload} onClick={goToEditMode}>Edit profile</button></div>}
+            {isOwner && <div><Button name='Edit profile' event={goToEditMode}/></div>}
             <p>Name: {profile.fullName}</p>
             <ProfileStatusWithHooks status={status} updateStatus={updateStatus} />
             <p>Looking for a job: {profile.lookingForAJob ? 'yes' : 'no'}</p>

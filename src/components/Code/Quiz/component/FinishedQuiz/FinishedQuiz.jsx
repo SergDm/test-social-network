@@ -1,5 +1,6 @@
 import React from 'react'
 import classes from './FinishedQuiz.module.css'
+import Button from '../../../../commonn/Button/Button'
 
 const FinishedQuiz = (props) => {
 
@@ -33,7 +34,7 @@ const FinishedQuiz = (props) => {
         <div className={classes.finished}>
             {finishResult}
             <b>Correct answers {successCount} of {props.quiz.length}</b>
-            <button onClick={props.onRetry}>RETRY</button>
+            <Button name='RETRY' event={props.onRetry}/>
 
         </div>
     )

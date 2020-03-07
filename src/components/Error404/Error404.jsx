@@ -2,6 +2,7 @@ import React from 'react'
 import err from '../Image/404.png'
 import classes from './Error404.module.css'
 import { Link } from 'react-router-dom'
+import Button from '../commonn/Button/Button'
 
 const Error = () => {
   return (
@@ -17,7 +18,7 @@ const Error = () => {
         <li>адрес с ошибкой. Например, вы набрали его с ошибкой или же перешли с другого сайта, где он указан с ошибкой;</li>
         <li>страницы никогда не было. На нашем сайте есть много других полезных и нужных страниц.</li>
         <hr/>
-        <Link to={'/'}><button>Перейти на главную страницу</button></Link>
+        <Link to={'/'}><Button name='Перейти на главную страницу'/></Link>
         </ul>
       </div>
     </div>
